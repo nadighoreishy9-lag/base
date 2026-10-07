@@ -1,0 +1,1261 @@
+{
+ "title": "نمونه‌کارها",
+ "type": "page",
+ "version": "0.4",
+ "page_settings": {
+  "template": "elementor_canvas"
+ },
+ "content": [
+  {
+   "id": "000015c",
+   "elType": "container",
+   "settings": {
+    "content_width": "full",
+    "css_classes": "nd-page",
+    "_css_classes": "nd-page"
+   },
+   "elements": [
+    {
+     "id": "0000158",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "css_classes": "nd-header",
+      "_css_classes": "nd-header"
+     },
+     "elements": [
+      {
+       "id": "0000157",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "css_classes": "nd-nav nd-glass",
+        "_css_classes": "nd-nav nd-glass"
+       },
+       "elements": [
+        {
+         "id": "000014f",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-brand",
+          "_css_classes": "nd-brand"
+         },
+         "elements": [
+          {
+           "id": "000014d",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "ن",
+            "header_size": "div",
+            "link": {
+             "url": "/",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-brand-mark",
+            "css_classes": "nd-brand-mark"
+           },
+           "elements": []
+          },
+          {
+           "id": "000014e",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "نادیا قریشی",
+            "header_size": "div",
+            "link": {
+             "url": "/",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-brand-name",
+            "css_classes": "nd-brand-name"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "0000155",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-menu",
+          "_css_classes": "nd-menu"
+         },
+         "elements": [
+          {
+           "id": "0000150",
+           "elType": "widget",
+           "widgetType": "button",
+           "settings": {
+            "text": "خانه",
+            "link": {
+             "url": "/",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-menu-link",
+            "css_classes": "nd-menu-link"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000151",
+           "elType": "widget",
+           "widgetType": "button",
+           "settings": {
+            "text": "خدمات",
+            "link": {
+             "url": "/services/",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-menu-link",
+            "css_classes": "nd-menu-link"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000152",
+           "elType": "widget",
+           "widgetType": "button",
+           "settings": {
+            "text": "نمونه‌کار",
+            "link": {
+             "url": "/portfolio/",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-menu-link nd-menu-link-active",
+            "css_classes": "nd-menu-link nd-menu-link-active"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000153",
+           "elType": "widget",
+           "widgetType": "button",
+           "settings": {
+            "text": "رزومه",
+            "link": {
+             "url": "/#resume",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-menu-link",
+            "css_classes": "nd-menu-link"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000154",
+           "elType": "widget",
+           "widgetType": "button",
+           "settings": {
+            "text": "تماس",
+            "link": {
+             "url": "/#contact",
+             "is_external": "",
+             "nofollow": ""
+            },
+            "_css_classes": "nd-menu-link",
+            "css_classes": "nd-menu-link"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "0000156",
+         "elType": "widget",
+         "widgetType": "button",
+         "settings": {
+          "text": "شروع گفتگو",
+          "link": {
+           "url": "/#contact",
+           "is_external": "",
+           "nofollow": ""
+          },
+          "_css_classes": "nd-btn nd-btn-dark nd-cta",
+          "css_classes": "nd-btn nd-btn-dark nd-cta"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "0000104",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "css_classes": "nd-page-hero",
+      "_css_classes": "nd-page-hero"
+     },
+     "elements": [
+      {
+       "id": "00000fb",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "نمونه‌کارها",
+        "header_size": "p",
+        "_css_classes": "nd-eyebrow",
+        "css_classes": "nd-eyebrow"
+       },
+       "elements": []
+      },
+      {
+       "id": "00000fc",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "کارهایی که ترکیب <span class=\"nd-accent\">سئو</span> و طراحی را نشان می‌دهند",
+        "header_size": "h1",
+        "_css_classes": "nd-page-title",
+        "css_classes": "nd-page-title"
+       },
+       "elements": []
+      },
+      {
+       "id": "00000fd",
+       "elType": "widget",
+       "widgetType": "text-editor",
+       "settings": {
+        "editor": "<p>در هر نمونه، رویکرد کار، کارهایی که انجام شده و نکته‌های سئویی آن را آورده‌ام. تصاویر برای نمایش فضای پروژه‌ها هستند و با ارسال فایل‌های واقعی شما جایگزین می‌شوند.</p>",
+        "_css_classes": "nd-muted",
+        "css_classes": "nd-muted"
+       },
+       "elements": []
+      },
+      {
+       "id": "0000103",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "css_classes": "nd-filters",
+        "_css_classes": "nd-filters"
+       },
+       "elements": [
+        {
+         "id": "00000fe",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "سئو فنی",
+          "header_size": "div",
+          "_css_classes": "nd-filter",
+          "css_classes": "nd-filter"
+         },
+         "elements": []
+        },
+        {
+         "id": "00000ff",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "تحقیق کلمات کلیدی",
+          "header_size": "div",
+          "_css_classes": "nd-filter",
+          "css_classes": "nd-filter"
+         },
+         "elements": []
+        },
+        {
+         "id": "0000100",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "بهینه‌سازی محتوا",
+          "header_size": "div",
+          "_css_classes": "nd-filter",
+          "css_classes": "nd-filter"
+         },
+         "elements": []
+        },
+        {
+         "id": "0000101",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "طراحی رابط",
+          "header_size": "div",
+          "_css_classes": "nd-filter",
+          "css_classes": "nd-filter"
+         },
+         "elements": []
+        },
+        {
+         "id": "0000102",
+         "elType": "widget",
+         "widgetType": "heading",
+         "settings": {
+          "title": "طراحی واکنش‌گرا",
+          "header_size": "div",
+          "_css_classes": "nd-filter",
+          "css_classes": "nd-filter"
+         },
+         "elements": []
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "000010c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "css_classes": "nd-section",
+      "_css_classes": "nd-section"
+     },
+     "elements": [
+      {
+       "id": "000010b",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "css_classes": "nd-featured",
+        "_css_classes": "nd-featured"
+       },
+       "elements": [
+        {
+         "id": "0000105",
+         "elType": "widget",
+         "widgetType": "image",
+         "settings": {
+          "image": {
+           "url": "/wp-content/plugins/nadia-design/assets/images/work-shop.jpg",
+           "id": "",
+           "alt": "نمونه طراحی و سئوی فروشگاه اینترنتی روی نمایشگر لپ‌تاپ",
+           "source": "library"
+          },
+          "image_size": "full",
+          "_css_classes": "nd-featured-img",
+          "css_classes": "nd-featured-img"
+         },
+         "elements": []
+        },
+        {
+         "id": "000010a",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-featured-body",
+          "_css_classes": "nd-featured-body"
+         },
+         "elements": [
+          {
+           "id": "0000106",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "پروژه شاخص",
+            "header_size": "div",
+            "_css_classes": "nd-badge-accent",
+            "css_classes": "nd-badge-accent"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000107",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "فروشگاه اینترنتی چنددسته‌ای",
+            "header_size": "h2",
+            "_css_classes": "nd-h2",
+            "css_classes": "nd-h2"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000108",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>بازطراحی صفحه اصلی و صفحات دسته‌بندی با تمرکز بر مسیر ساده خرید، همراه با ساختار لینک داخلی و عنوان‌های بهینه برای صفحات محصول.</p>",
+            "_css_classes": "nd-muted",
+            "css_classes": "nd-muted"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000109",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<ul><li>ساختاردهی دسته‌بندی‌ها و لینک‌سازی داخلی</li><li>بهینه‌سازی عنوان، توضیحات و داده ساختاریافته محصول</li><li>بهبود سرعت بارگذاری و تجربه موبایل</li></ul>",
+            "_css_classes": "nd-points",
+            "css_classes": "nd-points"
+           },
+           "elements": []
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "0000144",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "css_classes": "nd-section",
+      "_css_classes": "nd-section"
+     },
+     "elements": [
+      {
+       "id": "0000143",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "css_classes": "nd-grid nd-grid-2",
+        "_css_classes": "nd-grid nd-grid-2"
+       },
+       "elements": [
+        {
+         "id": "0000115",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-work",
+          "_css_classes": "nd-work"
+         },
+         "elements": [
+          {
+           "id": "000010d",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "/wp-content/plugins/nadia-design/assets/images/work-analytics.jpg",
+             "id": "",
+             "alt": "داشبورد تحلیل و گزارش سئو روی نمایشگر",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "nd-work-img",
+            "css_classes": "nd-work-img"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000114",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-work-body",
+            "_css_classes": "nd-work-body"
+           },
+           "elements": [
+            {
+             "id": "0000110",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "css_classes": "nd-work-meta",
+              "_css_classes": "nd-work-meta"
+             },
+             "elements": [
+              {
+               "id": "000010e",
+               "elType": "widget",
+               "widgetType": "icon",
+               "settings": {
+                "selected_icon": {
+                 "value": "fas fa-chart-bar",
+                 "library": "fa-solid"
+                },
+                "view": "default",
+                "_css_classes": "nd-work-icon",
+                "css_classes": "nd-work-icon"
+               },
+               "elements": []
+              },
+              {
+               "id": "000010f",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "تحلیل و گزارش سئو",
+                "header_size": "div",
+                "_css_classes": "nd-work-tag",
+                "css_classes": "nd-work-tag"
+               },
+               "elements": []
+              }
+             ],
+             "isInner": false
+            },
+            {
+             "id": "0000111",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "داشبورد تحلیل عملکرد جست‌وجو",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000112",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>پایش رتبه‌ها، ترافیک ارگانیک و صفحات کلیدی و تبدیل داده‌ها به گزارشی قابل فهم برای تصمیم‌گیری.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000113",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<ul><li>گزارش ماهانه</li><li>پایش کلمات کلیدی</li><li>اولویت‌بندی اقدام‌ها</li></ul>",
+              "_css_classes": "nd-chips",
+              "css_classes": "nd-chips"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "000011e",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-work",
+          "_css_classes": "nd-work"
+         },
+         "elements": [
+          {
+           "id": "0000116",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "/wp-content/plugins/nadia-design/assets/images/work-blog.jpg",
+             "id": "",
+             "alt": "نمونه طراحی وب‌سایت محتوایی و مجله‌ای",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "nd-work-img",
+            "css_classes": "nd-work-img"
+           },
+           "elements": []
+          },
+          {
+           "id": "000011d",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-work-body",
+            "_css_classes": "nd-work-body"
+           },
+           "elements": [
+            {
+             "id": "0000119",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "css_classes": "nd-work-meta",
+              "_css_classes": "nd-work-meta"
+             },
+             "elements": [
+              {
+               "id": "0000117",
+               "elType": "widget",
+               "widgetType": "icon",
+               "settings": {
+                "selected_icon": {
+                 "value": "fas fa-search",
+                 "library": "fa-solid"
+                },
+                "view": "default",
+                "_css_classes": "nd-work-icon",
+                "css_classes": "nd-work-icon"
+               },
+               "elements": []
+              },
+              {
+               "id": "0000118",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "استراتژی محتوا · سئو",
+                "header_size": "div",
+                "_css_classes": "nd-work-tag",
+                "css_classes": "nd-work-tag"
+               },
+               "elements": []
+              }
+             ],
+             "isInner": false
+            },
+            {
+             "id": "000011a",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "وب‌سایت محتوایی و مجله‌ای",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "000011b",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>معماری محتوا بر پایه نیت جست‌وجوی کاربر، همراه با طراحی خوانا برای مقاله‌های بلند.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            },
+            {
+             "id": "000011c",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<ul><li>خوشه‌بندی موضوعی</li><li>ساختار تیترها</li><li>لینک داخلی مقاله‌ها</li></ul>",
+              "_css_classes": "nd-chips",
+              "css_classes": "nd-chips"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "0000127",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-work",
+          "_css_classes": "nd-work"
+         },
+         "elements": [
+          {
+           "id": "000011f",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "/wp-content/plugins/nadia-design/assets/images/work-responsive.jpg",
+             "id": "",
+             "alt": "نمایش سایت شرکتی روی موبایل و تبلت",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "nd-work-img",
+            "css_classes": "nd-work-img"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000126",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-work-body",
+            "_css_classes": "nd-work-body"
+           },
+           "elements": [
+            {
+             "id": "0000122",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "css_classes": "nd-work-meta",
+              "_css_classes": "nd-work-meta"
+             },
+             "elements": [
+              {
+               "id": "0000120",
+               "elType": "widget",
+               "widgetType": "icon",
+               "settings": {
+                "selected_icon": {
+                 "value": "fas fa-mobile-alt",
+                 "library": "fa-solid"
+                },
+                "view": "default",
+                "_css_classes": "nd-work-icon",
+                "css_classes": "nd-work-icon"
+               },
+               "elements": []
+              },
+              {
+               "id": "0000121",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "طراحی واکنش‌گرا",
+                "header_size": "div",
+                "_css_classes": "nd-work-tag",
+                "css_classes": "nd-work-tag"
+               },
+               "elements": []
+              }
+             ],
+             "isInner": false
+            },
+            {
+             "id": "0000123",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "سایت شرکتی در موبایل و تبلت",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000124",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>طراحی یکپارچه در همه اندازه‌ها با توجه به سرعت، خوانایی و مسیر تماس کاربر.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000125",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<ul><li>اولویت موبایل</li><li>سرعت بارگذاری</li><li>دسترس‌پذیری</li></ul>",
+              "_css_classes": "nd-chips",
+              "css_classes": "nd-chips"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "0000130",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-work",
+          "_css_classes": "nd-work"
+         },
+         "elements": [
+          {
+           "id": "0000128",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "/wp-content/plugins/nadia-design/assets/images/project-corporate.jpg",
+             "id": "",
+             "alt": "نمونه طراحی صفحه خدمات سایت شرکتی",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "nd-work-img",
+            "css_classes": "nd-work-img"
+           },
+           "elements": []
+          },
+          {
+           "id": "000012f",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-work-body",
+            "_css_classes": "nd-work-body"
+           },
+           "elements": [
+            {
+             "id": "000012b",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "css_classes": "nd-work-meta",
+              "_css_classes": "nd-work-meta"
+             },
+             "elements": [
+              {
+               "id": "0000129",
+               "elType": "widget",
+               "widgetType": "icon",
+               "settings": {
+                "selected_icon": {
+                 "value": "fas fa-layer-group",
+                 "library": "fa-solid"
+                },
+                "view": "default",
+                "_css_classes": "nd-work-icon",
+                "css_classes": "nd-work-icon"
+               },
+               "elements": []
+              },
+              {
+               "id": "000012a",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "طراحی وب · سئو فنی",
+                "header_size": "div",
+                "_css_classes": "nd-work-tag",
+                "css_classes": "nd-work-tag"
+               },
+               "elements": []
+              }
+             ],
+             "isInner": false
+            },
+            {
+             "id": "000012c",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "صفحه خدمات شرکتی",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "000012d",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>ساختاردهی معرفی خدمات با چینش روشن و پایه‌های فنی سئو برای ایندکس بهتر صفحات.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            },
+            {
+             "id": "000012e",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<ul><li>ساختار صفحه</li><li>متادیتای صفحه</li><li>ناوبری روشن</li></ul>",
+              "_css_classes": "nd-chips",
+              "css_classes": "nd-chips"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "0000139",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-work",
+          "_css_classes": "nd-work"
+         },
+         "elements": [
+          {
+           "id": "0000131",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "/wp-content/plugins/nadia-design/assets/images/project-ecommerce.jpg",
+             "id": "",
+             "alt": "نمونه طراحی صفحه محصول فروشگاه اینترنتی",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "nd-work-img",
+            "css_classes": "nd-work-img"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000138",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-work-body",
+            "_css_classes": "nd-work-body"
+           },
+           "elements": [
+            {
+             "id": "0000134",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "css_classes": "nd-work-meta",
+              "_css_classes": "nd-work-meta"
+             },
+             "elements": [
+              {
+               "id": "0000132",
+               "elType": "widget",
+               "widgetType": "icon",
+               "settings": {
+                "selected_icon": {
+                 "value": "fas fa-search",
+                 "library": "fa-solid"
+                },
+                "view": "default",
+                "_css_classes": "nd-work-icon",
+                "css_classes": "nd-work-icon"
+               },
+               "elements": []
+              },
+              {
+               "id": "0000133",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "سئو فروشگاهی",
+                "header_size": "div",
+                "_css_classes": "nd-work-tag",
+                "css_classes": "nd-work-tag"
+               },
+               "elements": []
+              }
+             ],
+             "isInner": false
+            },
+            {
+             "id": "0000135",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "بهینه‌سازی صفحه محصول",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000136",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>بازبینی عنوان، توضیحات و بخش نقد و بررسی برای پاسخ کامل‌تر به پرسش خریدار.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000137",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<ul><li>توضیح محصول</li><li>داده ساختاریافته</li><li>تجربه خرید</li></ul>",
+              "_css_classes": "nd-chips",
+              "css_classes": "nd-chips"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        },
+        {
+         "id": "0000142",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-work",
+          "_css_classes": "nd-work"
+         },
+         "elements": [
+          {
+           "id": "000013a",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "/wp-content/plugins/nadia-design/assets/images/work-shop.jpg",
+             "id": "",
+             "alt": "نمونه طراحی صفحه اصلی فروشگاه اینترنتی",
+             "source": "library"
+            },
+            "image_size": "full",
+            "_css_classes": "nd-work-img",
+            "css_classes": "nd-work-img"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000141",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-work-body",
+            "_css_classes": "nd-work-body"
+           },
+           "elements": [
+            {
+             "id": "000013d",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "css_classes": "nd-work-meta",
+              "_css_classes": "nd-work-meta"
+             },
+             "elements": [
+              {
+               "id": "000013b",
+               "elType": "widget",
+               "widgetType": "icon",
+               "settings": {
+                "selected_icon": {
+                 "value": "fas fa-layer-group",
+                 "library": "fa-solid"
+                },
+                "view": "default",
+                "_css_classes": "nd-work-icon",
+                "css_classes": "nd-work-icon"
+               },
+               "elements": []
+              },
+              {
+               "id": "000013c",
+               "elType": "widget",
+               "widgetType": "heading",
+               "settings": {
+                "title": "طراحی رابط",
+                "header_size": "div",
+                "_css_classes": "nd-work-tag",
+                "css_classes": "nd-work-tag"
+               },
+               "elements": []
+              }
+             ],
+             "isInner": false
+            },
+            {
+             "id": "000013e",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "صفحه اصلی فروشگاهی",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "000013f",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>چیدمان بنرها، دسته‌بندی‌ها و پیشنهادهای ویژه برای هدایت سریع کاربر به محصول درست.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000140",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<ul><li>سلسله‌مراتب بصری</li><li>کال‌تو‌اکشن روشن</li><li>هویت رنگی</li></ul>",
+              "_css_classes": "nd-chips",
+              "css_classes": "nd-chips"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "000014c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "css_classes": "nd-section",
+      "_css_classes": "nd-section"
+     },
+     "elements": [
+      {
+       "id": "000014b",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "css_classes": "nd-contact-box nd-glass",
+        "_css_classes": "nd-contact-box nd-glass"
+       },
+       "elements": [
+        {
+         "id": "000014a",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "css_classes": "nd-contact-inner",
+          "_css_classes": "nd-contact-inner"
+         },
+         "elements": [
+          {
+           "id": "0000145",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "پروژه بعدی می‌تواند مال شما باشد",
+            "header_size": "h2",
+            "_css_classes": "nd-contact-title",
+            "css_classes": "nd-contact-title"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000146",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "<p>اگر سایتی دارید که باید بهتر دیده شود یا نیاز به طراحی تازه دارد، جزئیات را برایم بفرستید تا مسیر کار را شفاف توضیح دهم.</p>",
+            "_css_classes": "nd-contact-text",
+            "css_classes": "nd-contact-text"
+           },
+           "elements": []
+          },
+          {
+           "id": "0000149",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-contact-links",
+            "_css_classes": "nd-contact-links"
+           },
+           "elements": [
+            {
+             "id": "0000147",
+             "elType": "widget",
+             "widgetType": "button",
+             "settings": {
+              "text": "ارتباط با من",
+              "link": {
+               "url": "/#contact",
+               "is_external": "",
+               "nofollow": ""
+              },
+              "_css_classes": "nd-btn nd-btn-primary",
+              "css_classes": "nd-btn nd-btn-primary"
+             },
+             "elements": []
+            },
+            {
+             "id": "0000148",
+             "elType": "widget",
+             "widgetType": "button",
+             "settings": {
+              "text": "بازگشت به صفحه اصلی",
+              "link": {
+               "url": "/",
+               "is_external": "",
+               "nofollow": ""
+              },
+              "_css_classes": "nd-btn nd-btn-ghost",
+              "css_classes": "nd-btn nd-btn-ghost"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          }
+         ],
+         "isInner": false
+        }
+       ],
+       "isInner": false
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "000015b",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "css_classes": "nd-footer",
+      "_css_classes": "nd-footer"
+     },
+     "elements": [
+      {
+       "id": "0000159",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "© ۱۴۰۵ نادیا قریشی",
+        "header_size": "div"
+       },
+       "elements": []
+      },
+      {
+       "id": "000015a",
+       "elType": "widget",
+       "widgetType": "heading",
+       "settings": {
+        "title": "سئو با نگاه طراحی؛ طراحی با فکر دیده‌شدن",
+        "header_size": "div"
+       },
+       "elements": []
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ]
+}

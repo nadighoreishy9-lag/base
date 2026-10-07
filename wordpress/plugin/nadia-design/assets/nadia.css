@@ -1,0 +1,1330 @@
+/* ==========================================================================
+   Nadia Design — استایل صفحات المنتور
+   برگرفته از دیزاین‌سیستم پروژه اصلی (تم روشن، رنگ بنفش، فونت وزیرمتن، RTL)
+
+   نکته سازگاری: المنتور بسته به تنظیم «Optimized Markup» ممکن است برای ویجت‌ها
+   div.elementor-widget-container و برای کانتینرها div.e-con-inner رندر کند یا نکند.
+   دو قاعده normalize زیر هر دو حالت را یکسان می‌کنند تا همه استایل‌ها روی خود
+   المان اعمال شود.
+   ========================================================================== */
+
+:root {
+  --nd-bg: oklch(0.975 0.01 288);
+  --nd-fg: oklch(0.2 0.035 283);
+  --nd-card: oklch(1 0 0 / 78%);
+  --nd-primary: oklch(0.48 0.18 292);
+  --nd-primary-fg: oklch(0.985 0.004 290);
+  --nd-secondary: oklch(0.91 0.035 292);
+  --nd-secondary-fg: oklch(0.3 0.08 292);
+  --nd-accent: oklch(0.86 0.055 200);
+  --nd-accent-fg: oklch(0.25 0.045 215);
+  --nd-border: oklch(0.88 0.025 288);
+  --nd-surface: oklch(1 0 0 / 66%);
+  --nd-surface-strong: oklch(0.93 0.04 292);
+  --nd-muted-fg: oklch(0.5 0.03 282);
+  --nd-cyan: oklch(0.72 0.11 205);
+  --nd-shell: 72rem;
+  --nd-pad: max(1.5rem, calc((100% - var(--nd-shell)) / 2));
+  --nd-shadow-soft: 0 24px 70px -32px color-mix(in oklab, var(--nd-fg) 20%, transparent);
+  --nd-shadow-violet: 0 24px 70px -34px color-mix(in oklab, oklch(0.58 0.18 292) 38%, transparent);
+  --nd-ico-sparkle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2'/%3E%3C/svg%3E");
+  --nd-ico-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
+  --nd-ico-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17V7h10'/%3E%3Cpath d='M17 17 7 7'/%3E%3C/svg%3E");
+  --nd-ico-left: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 19-7-7 7-7'/%3E%3Cpath d='M19 12H5'/%3E%3C/svg%3E");
+  --nd-ico-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12'/%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3Cpath d='M5 21h14'/%3E%3C/svg%3E");
+}
+
+body {
+  background-color: var(--nd-bg);
+  color: var(--nd-fg);
+  font-family: "Vazirmatn", "IRANSansX", "Segoe UI", Tahoma, sans-serif;
+}
+
+body .nd-page {
+  direction: rtl;
+  text-align: right;
+  background-color: var(--nd-bg);
+  color: var(--nd-fg);
+  font-family: "Vazirmatn", "IRANSansX", "Segoe UI", Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+body .nd-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+body .nd-page ::selection {
+  background: color-mix(in oklab, var(--nd-primary) 25%, transparent);
+}
+
+/* ---------- normalize: حذف لایه‌های واسط المنتور ------------------------- */
+
+body .nd-page .e-con-inner,
+body .nd-page .elementor-widget-container {
+  display: contents;
+}
+
+body .nd-page .e-con {
+  --flex-direction: column;
+}
+
+body .nd-page .elementor-widget {
+  --flex-direction: column;
+}
+
+/* ---------- بلوک‌های پایه ------------------------------------------------- */
+
+body .nd-page .nd-glass {
+  background: var(--nd-surface);
+  border: 1px solid color-mix(in oklab, var(--nd-border) 72%, transparent);
+  box-shadow: var(--nd-shadow-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+body .nd-page .nd-accent {
+  color: var(--nd-primary);
+}
+
+body .nd-page .nd-strong {
+  color: var(--nd-primary);
+  font-weight: 700;
+}
+
+body .nd-page .nd-center {
+  text-align: center;
+}
+
+body .nd-page .nd-eyebrow,
+body .nd-page .nd-eyebrow .elementor-heading-title {
+  color: var(--nd-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+body .nd-page .nd-h2 .elementor-heading-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+body .nd-page .nd-h3 .elementor-heading-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+body .nd-page .nd-muted,
+body .nd-page .nd-muted p {
+  color: var(--nd-muted-fg);
+  line-height: 2rem;
+}
+
+body .nd-page .nd-muted p {
+  margin: 0;
+}
+
+body .nd-page .nd-reveal {
+  animation: nd-reveal 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+body .nd-page .nd-reveal-delay {
+  animation-delay: 0.15s;
+}
+
+@keyframes nd-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- دکمه‌ها ------------------------------------------------------- */
+
+body .nd-page .nd-btn .elementor-button,
+body .nd-page .nd-cta .elementor-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+body .nd-page .nd-btn .elementor-button:hover,
+body .nd-page .nd-cta .elementor-button:hover {
+  transform: translateY(-2px);
+}
+
+body .nd-page .nd-btn-primary .elementor-button {
+  background-color: var(--nd-primary);
+  color: var(--nd-primary-fg);
+  box-shadow: var(--nd-shadow-violet);
+}
+
+body .nd-page .nd-btn-ghost .elementor-button {
+  background: var(--nd-surface);
+  border: 1px solid color-mix(in oklab, var(--nd-border) 72%, transparent);
+  color: var(--nd-fg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+body .nd-page .nd-btn-dark .elementor-button {
+  background-color: var(--nd-fg);
+  color: var(--nd-bg);
+}
+
+body .nd-page .nd-btn-light .elementor-button {
+  background-color: var(--nd-bg);
+  color: var(--nd-fg);
+}
+
+body .nd-page .nd-link-btn .elementor-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  background: none;
+  color: var(--nd-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+body .nd-page .nd-link-btn .elementor-button:hover {
+  color: color-mix(in oklab, var(--nd-primary) 80%, transparent);
+  transform: none;
+}
+
+body .nd-page .nd-link-btn .elementor-button::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: currentColor;
+  -webkit-mask: var(--nd-ico-left) center / contain no-repeat;
+  mask: var(--nd-ico-left) center / contain no-repeat;
+}
+
+/* ---------- هدر و ناوبری -------------------------------------------------- */
+
+body .nd-page .nd-header {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  display: block;
+  padding: 1rem 1rem 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+body .nd-page .nd-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+}
+
+body .nd-page .nd-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+}
+
+body .nd-page .nd-brand-mark {
+  flex: 0 0 auto;
+}
+
+body .nd-page .nd-brand-mark .elementor-heading-title {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--nd-primary);
+  color: var(--nd-primary-fg);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+body .nd-page .nd-brand-name .elementor-heading-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--nd-fg);
+}
+
+body .nd-page .nd-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+body .nd-page .nd-menu-link .elementor-button {
+  padding: 0;
+  background: none;
+  color: var(--nd-muted-fg);
+  box-shadow: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+body .nd-page .nd-menu-link .elementor-button:hover {
+  color: var(--nd-fg);
+  transform: none;
+}
+
+body .nd-page .nd-menu-link-active .elementor-button {
+  color: var(--nd-fg);
+  font-weight: 700;
+}
+
+body .nd-page .nd-cta .elementor-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ---------- هیرو صفحه اصلی ------------------------------------------------ */
+
+body .nd-page .nd-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3rem;
+  min-height: 78vh;
+  padding: 9rem var(--nd-pad) 4rem;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+body .nd-page .nd-hero-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+body .nd-page .nd-kicker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--nd-secondary);
+}
+
+body .nd-page .nd-kicker::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--nd-primary);
+  -webkit-mask: var(--nd-ico-sparkle) center / contain no-repeat;
+  mask: var(--nd-ico-sparkle) center / contain no-repeat;
+}
+
+body .nd-page .nd-kicker-text .elementor-heading-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--nd-secondary-fg);
+  white-space: nowrap;
+}
+
+body .nd-page .nd-hello .elementor-heading-title {
+  margin-top: 1.75rem;
+  color: var(--nd-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+body .nd-page .nd-hero-title .elementor-heading-title {
+  margin-top: 0.75rem;
+  max-width: 48rem;
+  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+body .nd-page .nd-lead {
+  margin-top: 1.75rem;
+  max-width: 42rem;
+  color: var(--nd-muted-fg);
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+}
+
+body .nd-page .nd-lead p {
+  margin: 0;
+}
+
+body .nd-page .nd-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+body .nd-page .nd-portrait-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  justify-self: end;
+}
+
+body .nd-page .nd-portrait-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -2rem;
+  border-radius: 4rem;
+  background-color: var(--nd-secondary);
+  filter: blur(48px);
+  z-index: 0;
+}
+
+body .nd-page .nd-portrait-card {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 0.75rem;
+  border-radius: 2rem;
+}
+
+body .nd-page .nd-portrait-img img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1.4rem;
+}
+
+body .nd-page .nd-portrait-caption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.75rem 0.25rem;
+}
+
+body .nd-page .nd-caption-strong .elementor-heading-title,
+body .nd-page .nd-caption-muted .elementor-heading-title {
+  font-size: 0.875rem;
+}
+
+body .nd-page .nd-caption-strong .elementor-heading-title {
+  font-weight: 700;
+}
+
+body .nd-page .nd-caption-muted .elementor-heading-title {
+  color: var(--nd-muted-fg);
+  font-weight: 500;
+}
+
+/* ---------- بخش‌ها ------------------------------------------------------- */
+
+body .nd-page .nd-section {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem var(--nd-pad);
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+body .nd-page .nd-surface {
+  background-color: var(--nd-surface);
+  border-block: 1px solid var(--nd-border);
+}
+
+body .nd-page .nd-section-head {
+  display: block;
+  max-width: 42rem;
+}
+
+body .nd-page .nd-section-head .nd-h2 .elementor-heading-title {
+  margin-top: 0.75rem;
+}
+
+body .nd-page .nd-section-head .nd-muted {
+  margin-top: 1.25rem;
+}
+
+body .nd-page .nd-section-head .nd-link-btn {
+  margin-top: 1.25rem;
+}
+
+body .nd-page .nd-head-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+body .nd-page .nd-head-main {
+  display: block;
+}
+
+body .nd-page .nd-head-aside {
+  max-width: 28rem;
+  color: var(--nd-muted-fg);
+  line-height: 1.75rem;
+}
+
+body .nd-page .nd-head-aside p {
+  margin: 0;
+}
+
+body .nd-page .nd-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+body .nd-page .nd-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body .nd-page .nd-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- کارت خدمات --------------------------------------------------- */
+
+body .nd-page .nd-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+body .nd-page .nd-card:hover {
+  transform: translateY(-4px);
+}
+
+body .nd-page .nd-card-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+body .nd-page .nd-card-icon .elementor-icon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background-color: var(--nd-secondary);
+  color: var(--nd-primary);
+  font-size: 1.25rem;
+}
+
+body .nd-page .nd-card-icon .elementor-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+body .nd-page .nd-tag .elementor-heading-title {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--nd-accent);
+  color: var(--nd-accent-fg);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+body .nd-page .nd-card .nd-h3 .elementor-heading-title {
+  margin-top: 1.5rem;
+}
+
+body .nd-page .nd-card .nd-muted {
+  margin-top: 0.75rem;
+  line-height: 1.75rem;
+}
+
+/* ---------- نمونه‌کارها -------------------------------------------------- */
+
+body .nd-page .nd-project {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--nd-border);
+  border-radius: 1rem;
+  background-color: var(--nd-card);
+  box-shadow: var(--nd-shadow-soft);
+}
+
+body .nd-page .nd-project-img {
+  overflow: hidden;
+}
+
+body .nd-page .nd-project-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+body .nd-page .nd-project:hover .nd-project-img img {
+  transform: scale(1.03);
+}
+
+body .nd-page .nd-project-body {
+  display: block;
+  padding: 1.5rem;
+}
+
+body .nd-page .nd-project-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+body .nd-page .nd-project-type .elementor-heading-title {
+  color: var(--nd-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+body .nd-page .nd-project .nd-h3 .elementor-heading-title {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+}
+
+body .nd-page .nd-project .nd-muted {
+  margin-top: 0.75rem;
+}
+
+body .nd-page .nd-project-arrow {
+  flex: 0 0 auto;
+}
+
+body .nd-page .nd-project-arrow .elementor-icon {
+  color: var(--nd-muted-fg);
+}
+
+body .nd-page .nd-project-arrow .elementor-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+body .nd-page .nd-cta-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+/* ---------- نوار رزومه (تیره) ------------------------------------------ */
+
+body .nd-page .nd-band {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 4rem;
+  padding: 6rem var(--nd-pad);
+  background-color: var(--nd-fg);
+  color: var(--nd-bg);
+  border: 0;
+  box-shadow: none;
+}
+
+body .nd-page .nd-band-left {
+  display: block;
+}
+
+body .nd-page .nd-band-eyebrow .elementor-heading-title {
+  color: var(--nd-cyan);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+body .nd-page .nd-band .nd-h2 .elementor-heading-title {
+  margin-top: 0.75rem;
+  color: var(--nd-bg);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+body .nd-page .nd-band-text {
+  margin-top: 1.5rem;
+  color: color-mix(in oklab, var(--nd-bg) 70%, transparent);
+  line-height: 2rem;
+}
+
+body .nd-page .nd-band-text p {
+  margin: 0;
+}
+
+body .nd-page .nd-band-btn {
+  display: inline-flex;
+  margin-top: 2rem;
+}
+
+body .nd-page .nd-timeline {
+  display: grid;
+  gap: 1.25rem;
+}
+
+body .nd-page .nd-timeline-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid color-mix(in oklab, var(--nd-bg) 15%, transparent);
+  border-radius: 1rem;
+  background-color: color-mix(in oklab, var(--nd-bg) 5%, transparent);
+}
+
+body .nd-page .nd-step-num {
+  flex: 0 0 auto;
+}
+
+body .nd-page .nd-step-num .elementor-heading-title {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background-color: var(--nd-primary);
+  color: var(--nd-primary-fg);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+body .nd-page .nd-timeline-body {
+  display: block;
+  min-width: 0;
+}
+
+body .nd-page .nd-step-label .elementor-heading-title {
+  color: color-mix(in oklab, var(--nd-bg) 55%, transparent);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+body .nd-page .nd-timeline-body .nd-h3 .elementor-heading-title {
+  margin-top: 0.25rem;
+  color: var(--nd-bg);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+body .nd-page .nd-band .nd-muted {
+  margin-top: 0.75rem;
+  color: color-mix(in oklab, var(--nd-bg) 65%, transparent);
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+/* ---------- تماس و فوتر -------------------------------------------------- */
+
+body .nd-page .nd-contact-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+body .nd-page .nd-contact-box::before {
+  content: "";
+  position: absolute;
+  top: -6rem;
+  inset-inline: 25%;
+  height: 12rem;
+  border-radius: 999px;
+  background-color: var(--nd-secondary);
+  filter: blur(48px);
+}
+
+body .nd-page .nd-contact-inner {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+body .nd-page .nd-contact-icon {
+  display: flex;
+  justify-content: center;
+}
+
+body .nd-page .nd-contact-icon .elementor-icon {
+  color: var(--nd-primary);
+}
+
+body .nd-page .nd-contact-icon .elementor-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+body .nd-page .nd-contact-title .elementor-heading-title {
+  margin-top: 1.25rem;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+body .nd-page .nd-contact-text {
+  max-width: 36rem;
+  margin: 1.25rem auto 0;
+  color: var(--nd-muted-fg);
+  line-height: 2rem;
+}
+
+body .nd-page .nd-contact-text p {
+  margin: 0;
+}
+
+body .nd-page .nd-contact-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+body .nd-page .nd-chip .elementor-heading-title {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--nd-border);
+  border-radius: 0.75rem;
+  background-color: var(--nd-bg);
+  color: var(--nd-fg);
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+body .nd-page .nd-chip-primary .elementor-heading-title {
+  border-color: transparent;
+  background-color: var(--nd-primary);
+  color: var(--nd-primary-fg);
+}
+
+body .nd-page .nd-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 2rem var(--nd-pad);
+  border-top: 1px solid var(--nd-border);
+  background: none;
+  box-shadow: none;
+}
+
+body .nd-page .nd-footer .elementor-heading-title {
+  color: var(--nd-muted-fg);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ---------- هیرو صفحات داخلی (خدمات / نمونه‌کار) ------------------------ */
+
+body .nd-page .nd-page-hero {
+  position: relative;
+  display: block;
+  padding: 9rem var(--nd-pad) 2.5rem;
+  text-align: center;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+body .nd-page .nd-page-hero::before {
+  content: "";
+  position: absolute;
+  top: 4rem;
+  inset-inline: 25%;
+  height: 14rem;
+  border-radius: 999px;
+  background-color: var(--nd-secondary);
+  filter: blur(48px);
+  z-index: 0;
+}
+
+body .nd-page .nd-page-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+body .nd-page .nd-page-title .elementor-heading-title {
+  max-width: 48rem;
+  margin: 1rem auto 0;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+body .nd-page .nd-page-hero .nd-muted {
+  max-width: 42rem;
+  margin: 1.5rem auto 0;
+  color: var(--nd-muted-fg);
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+}
+
+/* ---------- جداکننده و کارت‌های جزئیات خدمات ---------------------------- */
+
+body .nd-page .nd-divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+body .nd-page .nd-divider-line {
+  flex: 1 1 auto;
+  height: 1px;
+  background-color: var(--nd-border);
+}
+
+body .nd-page .nd-divider-label .elementor-heading-title {
+  color: var(--nd-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+body .nd-page .nd-detail {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+body .nd-page .nd-detail-lined::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(to left, var(--nd-primary), var(--nd-secondary));
+}
+
+body .nd-page .nd-detail-icon .elementor-icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: var(--nd-secondary);
+  color: var(--nd-primary);
+}
+
+body .nd-page .nd-detail-icon .elementor-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+body .nd-page .nd-detail .nd-h3 .elementor-heading-title {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+body .nd-page .nd-detail .nd-muted {
+  margin-top: 1rem;
+}
+
+body .nd-page .nd-list {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+body .nd-page .nd-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+body .nd-page .nd-list li {
+  display: flex;
+  gap: 0.75rem;
+  line-height: 1.75rem;
+  color: var(--nd-muted-fg);
+}
+
+body .nd-page .nd-list li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--nd-primary);
+  -webkit-mask: var(--nd-ico-check) center / contain no-repeat;
+  mask: var(--nd-ico-check) center / contain no-repeat;
+}
+
+body .nd-page .nd-deliverable {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--nd-border);
+  border-radius: 1rem;
+  background-color: color-mix(in oklab, var(--nd-bg) 60%, transparent);
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+}
+
+body .nd-page .nd-deliverable p {
+  margin: 0;
+}
+
+/* ---------- روند همکاری -------------------------------------------------- */
+
+body .nd-page .nd-process {
+  display: block;
+  padding: 3rem;
+  border: 1px solid var(--nd-border);
+  border-radius: 1.5rem;
+  background-color: var(--nd-card);
+  box-shadow: var(--nd-shadow-soft);
+}
+
+body .nd-page .nd-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+body .nd-page .nd-step-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+body .nd-page .nd-step-badge .elementor-heading-title {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background-color: var(--nd-primary);
+  color: var(--nd-primary-fg);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+body .nd-page .nd-step-card .nd-h3 .elementor-heading-title {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+body .nd-page .nd-step-card .nd-muted {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+}
+
+/* ---------- صفحه نمونه‌کارها -------------------------------------------- */
+
+body .nd-page .nd-filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+body .nd-page .nd-filter .elementor-heading-title {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--nd-surface);
+  border: 1px solid color-mix(in oklab, var(--nd-border) 72%, transparent);
+  box-shadow: var(--nd-shadow-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+body .nd-page .nd-featured {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  overflow: hidden;
+  border: 1px solid var(--nd-border);
+  border-radius: 1.5rem;
+  background-color: var(--nd-card);
+  box-shadow: var(--nd-shadow-soft);
+}
+
+body .nd-page .nd-featured-img {
+  height: 100%;
+}
+
+body .nd-page .nd-featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body .nd-page .nd-featured-body {
+  display: block;
+  padding: 2.5rem;
+}
+
+body .nd-page .nd-badge-accent .elementor-heading-title {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--nd-accent);
+  color: var(--nd-accent-fg);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+body .nd-page .nd-featured-body .nd-h2 .elementor-heading-title {
+  margin-top: 1.25rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+body .nd-page .nd-featured-body .nd-muted {
+  margin-top: 1.25rem;
+}
+
+body .nd-page .nd-points {
+  margin-top: 1.5rem;
+}
+
+body .nd-page .nd-points ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--nd-muted-fg);
+}
+
+body .nd-page .nd-points li {
+  display: flex;
+  gap: 0.75rem;
+  line-height: 1.75rem;
+}
+
+body .nd-page .nd-points li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--nd-primary);
+  -webkit-mask: var(--nd-ico-arrow) center / contain no-repeat;
+  mask: var(--nd-ico-arrow) center / contain no-repeat;
+}
+
+body .nd-page .nd-work {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--nd-border);
+  border-radius: 1rem;
+  background-color: var(--nd-card);
+  box-shadow: var(--nd-shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+body .nd-page .nd-work:hover {
+  transform: translateY(-4px);
+}
+
+body .nd-page .nd-work-img {
+  overflow: hidden;
+}
+
+body .nd-page .nd-work-img img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+body .nd-page .nd-work:hover .nd-work-img img {
+  transform: scale(1.04);
+}
+
+body .nd-page .nd-work-body {
+  display: block;
+  padding: 1.75rem;
+}
+
+body .nd-page .nd-work-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+body .nd-page .nd-work-icon .elementor-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--nd-secondary);
+  color: var(--nd-primary);
+}
+
+body .nd-page .nd-work-icon .elementor-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+body .nd-page .nd-work-tag .elementor-heading-title {
+  color: var(--nd-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+body .nd-page .nd-work-body .nd-h3 .elementor-heading-title {
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+}
+
+body .nd-page .nd-work-body .nd-muted {
+  margin-top: 0.75rem;
+}
+
+body .nd-page .nd-chips {
+  margin-top: 1.25rem;
+}
+
+body .nd-page .nd-chips ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+body .nd-page .nd-chips li {
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--nd-surface-strong);
+  color: var(--nd-muted-fg);
+  font-size: 0.875rem;
+}
+
+/* ---------- واکنش‌گرایی -------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  body .nd-page .nd-grid-3,
+  body .nd-page .nd-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body .nd-page .nd-band,
+  body .nd-page .nd-featured,
+  body .nd-page .nd-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  body .nd-page .nd-hero {
+    min-height: 0;
+  }
+
+  body .nd-page .nd-portrait-wrap {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 767px) {
+  body .nd-page .nd-header {
+    padding: 0.75rem 0.75rem 0;
+  }
+
+  body .nd-page .nd-nav {
+    flex-wrap: wrap;
+  }
+
+  body .nd-page .nd-menu {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  body .nd-page .nd-menu-link .elementor-button {
+    font-size: 0.8125rem;
+  }
+
+  body .nd-page .nd-grid-3,
+  body .nd-page .nd-grid-2,
+  body .nd-page .nd-steps {
+    grid-template-columns: 1fr;
+  }
+
+  body .nd-page .nd-hero,
+  body .nd-page .nd-section,
+  body .nd-page .nd-band,
+  body .nd-page .nd-page-hero {
+    padding-inline: 1rem;
+  }
+
+  body .nd-page .nd-section,
+  body .nd-page .nd-band {
+    padding-block: 3.5rem;
+  }
+
+  body .nd-page .nd-detail,
+  body .nd-page .nd-process,
+  body .nd-page .nd-featured-body {
+    padding: 1.5rem;
+  }
+
+  body .nd-page .nd-contact-box {
+    padding: 2.5rem 1.25rem;
+  }
+
+  body .nd-page .nd-cta {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body .nd-page .nd-reveal {
+    animation: none;
+  }
+
+  body .nd-page .nd-project-img img,
+  body .nd-page .nd-work-img img {
+    transition: none;
+  }
+}

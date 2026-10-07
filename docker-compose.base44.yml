@@ -1,25 +1,84 @@
 services:
-  web:
-    image: node:22-alpine
-    working_dir: /app
-    command: ["node", "server.mjs"]
+  db:
+    image: mariadb:11
     environment:
-      - PORT=3000
-      - HOST=0.0.0.0
+      - MARIADB_DATABASE=wordpress
+      - MARIADB_USER=wordpress
+      - MARIADB_PASSWORD=wordpress
+      - MARIADB_ROOT_PASSWORD=wordpress
     volumes:
-      - ./:/app
-    ports:
-      - "3000:3000"
-    restart: on-failure
+      - db-data:/var/lib/mysql
     healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    restart: on-failure
+
+  wordpress:
+    image: wordpress:php8.3-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:80"
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DEBUG=1
+      - BASE44_PREVIEW_MODE
+      - BASE44_PUBLIC_HOST_SUFFIX
+      # توجه: پیش‌نمایش Base44 یک پروکسی است و هدر X-Forwarded-Proto نمی‌فرستد؛ شیم مربوط به
+      # هاست/پروتکل در wordpress/bin/bootstrap.sh و فقط در حالت BASE44_PREVIEW_MODE=1 ساخته می‌شود.
+    volumes:
+      - wp-data:/var/www/html
+      # افزونه استایل از مخزن mount می‌شود تا ویرایش CSS بدون rebuild دیده شود
+      - ./wordpress/plugin/nadia-design:/var/www/html/wp-content/plugins/nadia-design
+    healthcheck:
+      # /index.php مستقیم پاسخ ۲۰۰ می‌دهد؛ wp-login.php روی این پروکسی ریدایرکت می‌شود و
+      # سلامت‌سنج نباید دنبال ریدایرکت بیرونی برود.
       test:
         [
           "CMD",
-          "node",
-          "-e",
-          "fetch('http://127.0.0.1:3000/index.html').then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))",
+          "php",
+          "-r",
+          "exit(@file_get_contents('http://127.0.0.1/index.php') ? 0 : 1);",
         ]
       interval: 15s
       timeout: 5s
-      retries: 5
-      start_period: 5s
+      retries: 10
+      start_period: 30s
+    restart: on-failure
+
+  wpcli:
+    image: wordpress:cli-php8.3
+    # تصویر cli آلپاین است و www-data آن uid=82 دارد؛ برای نوشتن روی volume مشترک
+    # (که با uid=33 تصویر debian وردپرس ساخته شده) این سرویس به‌عنوان root اجرا و در
+    # انتهای bootstrap مالکیت wp-content به 33:33 برمی‌گردد.
+    user: "0:0"
+    depends_on:
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_healthy
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+      - BASE44_PREVIEW_MODE
+      - BASE44_PUBLIC_HOST_SUFFIX
+      - WP_ADMIN_PASSWORD=${WP_ADMIN_PASSWORD:-nadia-dev-admin}
+    volumes:
+      - wp-data:/var/www/html
+      - ./wordpress:/source:ro
+      # همان افزونه استایل که سرویس wordpress هم mount می‌کند، تا wp-cli آن را فعال کند
+      - ./wordpress/plugin/nadia-design:/var/www/html/wp-content/plugins/nadia-design
+    entrypoint: ["/bin/sh", "/source/bin/bootstrap.sh"]
+
+volumes:
+  db-data:
+  wp-data:
