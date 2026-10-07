@@ -40,7 +40,9 @@ echo "→ انتظار برای فایل‌های هسته وردپرس"
 until $WP core version >/dev/null 2>&1; do sleep 2; done
 
 echo "→ انتظار برای دیتابیس"
-until $WP db query "SELECT 1" >/dev/null 2>&1; do sleep 2; done
+# نکته: تصویر وب (wordpress:php8.3-apache) باینری کلاینت «mysql» ندارد، پس `wp db query`
+# روی آن کار نمی‌کند؛ اتصال با mysqli خود PHP بررسی می‌شود تا اسکریپت روی هر دو تصویر کار کند.
+until php -r 'exit(@mysqli_connect(getenv("WORDPRESS_DB_HOST") ?: "db", getenv("WORDPRESS_DB_USER"), getenv("WORDPRESS_DB_PASSWORD"), getenv("WORDPRESS_DB_NAME")) ? 0 : 1);' >/dev/null 2>&1; do sleep 2; done
 
 # آدرس سایت: در حالت پیش‌نمایش Base44 از دامنه عمومی و در غیر آن از localhost استفاده می‌شود.
 if [ "${BASE44_PREVIEW_MODE:-}" = "1" ] && [ -n "${BASE44_PUBLIC_HOST_SUFFIX:-}" ]; then

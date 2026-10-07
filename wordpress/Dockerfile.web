@@ -1,0 +1,9 @@
+# تصویر وب وردپرس + wp-cli، تا راه‌اندازی خودکار (bootstrap.sh) داخل همان سرویس وب اجرا شود
+# و سرویس one-shot جداگانه‌ای که پس از اتمام «exited» می‌شود وجود نداشته باشد.
+# وابستگی از تصویر رسمی wp-cli کپی می‌شود (کد اپ در تصویر بیک نمی‌شود؛ سورس bind-mount است).
+FROM wordpress:cli-php8.3 AS wpcli
+
+FROM wordpress:php8.3-apache
+
+COPY --from=wpcli /usr/local/bin/wp /usr/local/bin/wp
+RUN chmod +x /usr/local/bin/wp

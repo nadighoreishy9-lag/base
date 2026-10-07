@@ -14,6 +14,25 @@
 | `elementor/02-services.json` | قالب صفحه «خدمات» |
 | `elementor/03-portfolio.json` | قالب صفحه «نمونه‌کارها» |
 | `bin/` | اسکریپت‌های راه‌اندازی نمونه و اسکریپت ساخت همین قالب‌ها |
+| `downloads/index.html` | صفحه دانلود فایل‌ها؛ در پیش‌نمایش روی نشانی `/nadia-downloads/` باز می‌شود |
+
+## دانلود فایل‌ها
+
+صفحه `downloads/index.html` یک صفحه ساده با دکمه‌های دانلود است. در محیط پیش‌نمایش Base44
+روی این نشانی‌ها در دسترس است:
+
+| نشانی | فایل |
+| --- | --- |
+| `/nadia-downloads/` | صفحه دانلود با دکمه‌ها |
+| `/nadia-package/nadia-elementor-site.zip` | بسته آماده نصب (افزونه + سه قالب + همین راهنما) |
+| `/nadia-package/templates/01-home.json` | قالب خانه |
+| `/nadia-package/templates/02-services.json` | قالب خدمات |
+| `/nadia-package/templates/03-portfolio.json` | قالب نمونه‌کارها |
+
+همین فایل‌ها در مخزن هم هستند (پوشه `elementor/` و فایل `nadia-elementor-site.zip`)، پس اگر
+به پنل فایل هاست دسترسی دارید می‌توانید مستقیم همان‌ها را بردارید. برای دریافت فایل‌های
+`.json` روی دکمه‌های صفحه دانلود بزنید (لینک‌ها با صفت `download` هستند و در مرورگر دانلود
+می‌شوند، نه اینکه باز شوند).
 
 ## پیش‌نیازها
 
@@ -60,7 +79,9 @@
 - **بازسازی قالب‌ها از کد**: اگر محتوا را در کد تغییر دادید، با
   `python3 bin/build-elementor.py elementor` فایل‌های JSON بازسازی می‌شوند.
 - **تست محلی**: با `docker compose -f docker-compose.base44.yml up -d` یک وردپرس محلی
-  (پورت ۳۰۰۰) بالا می‌آید و `bin/bootstrap.sh` سه صفحه را از همین قالب‌ها می‌سازد.
+  (پورت ۳۰۰۰) بالا می‌آید و `bin/bootstrap.sh` внутри همان سرویس وب سه صفحه را از همین
+  قالب‌ها می‌سازد. بعد از تغییر یک قالب، دوباره اجرا کنید:
+  `docker compose -f docker-compose.base44.yml up -d --force-recreate wordpress`
 
 ## انتشار روی دامنه خودتان
 

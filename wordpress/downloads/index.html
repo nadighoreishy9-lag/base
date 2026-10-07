@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دانلود فایل‌های سایت المنتور — نادیا قریشی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nd-bg: oklch(0.975 0.01 288);
+    --nd-fg: oklch(0.2 0.035 283);
+    --nd-primary: oklch(0.48 0.18 292);
+    --nd-secondary: oklch(0.91 0.035 292);
+    --nd-secondary-fg: oklch(0.3 0.08 292);
+    --nd-border: oklch(0.88 0.025 288);
+    --nd-muted-fg: oklch(0.5 0.03 282);
+    --nd-shadow: 0 24px 70px -34px color-mix(in oklab, oklch(0.58 0.18 292) 38%, transparent);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: clamp(1.25rem, 5vw, 4rem) clamp(1rem, 4vw, 2.5rem);
+    background: var(--nd-bg);
+    color: var(--nd-fg);
+    font-family: "Vazirmatn", "IRANSansX", "Segoe UI", Tahoma, sans-serif;
+    line-height: 1.9;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; }
+  h1 { font-size: clamp(1.5rem, 3.2vw, 2.25rem); font-weight: 800; margin: 0 0 .5rem; }
+  .lead { color: var(--nd-muted-fg); margin: 0 0 2.5rem; max-width: 46rem; }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+  .card {
+    display: flex; flex-direction: column; gap: .75rem;
+    padding: 1.35rem 1.35rem 1.5rem;
+    background: oklch(1 0 0 / 78%);
+    border: 1px solid var(--nd-border);
+    border-radius: 1.25rem;
+    box-shadow: var(--nd-shadow);
+  }
+  .card--main { grid-column: 1 / -1; }
+  .tag {
+    align-self: flex-start;
+    font-size: .75rem; font-weight: 700;
+    padding: .25rem .7rem; border-radius: 999px;
+    background: var(--nd-secondary); color: var(--nd-secondary-fg);
+  }
+  .card h2 { font-size: 1.0625rem; font-weight: 700; margin: 0; }
+  .card p { margin: 0; color: var(--nd-muted-fg); font-size: .9375rem; }
+  .btn {
+    margin-top: auto;
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: .7rem 1.1rem; border-radius: .85rem;
+    background: var(--nd-primary); color: oklch(0.985 0.004 290);
+    font-weight: 700; text-decoration: none;
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  .btn:hover { opacity: .9; }
+  .btn:active { transform: translateY(1px); }
+  .btn--ghost { background: var(--nd-secondary); color: var(--nd-secondary-fg); }
+  .btn svg { width: 1.05rem; height: 1.05rem; flex: none; }
+  .steps { margin: 2.75rem 0 0; padding: 1.5rem 1.75rem; border: 1px solid var(--nd-border); border-radius: 1.25rem; background: oklch(1 0 0 / 66%); }
+  .steps h2 { margin: 0 0 .75rem; font-size: 1.0625rem; font-weight: 700; }
+  .steps ol { margin: 0; padding-inline-start: 1.25rem; }
+  .steps li { margin-bottom: .5rem; }
+  .steps li:last-child { margin-bottom: 0; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .875em; background: var(--nd-secondary); padding: .1rem .35rem; border-radius: .35rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>دانلود فایل‌های سایت المنتور</h1>
+  <p class="lead">
+    همه خروجی‌های این سایت از همین‌جا قابل دانلود است: بسته کامل نصب، یا هر قالب صفحه به‌صورت جداگانه.
+    محتوای صفحه‌ها کامل ویجت بومی المنتور است، پس بعد از ایمپورت همه‌چیز از داخل ویرایشگر المنتور قابل تغییر است.
+  </p>
+
+  <div class="grid">
+
+    <div class="card card--main">
+      <span class="tag">شروع از این‌جا</span>
+      <h2>بسته کامل نصب — <code>nadia-elementor-site.zip</code></h2>
+      <p>شامل افزونه استایل <code>nadia-design</code> (رنگ‌ها، فونت وزیرمتن، تصاویر)، سه قالب صفحه و راهنمای نصب فارسی.</p>
+      <a class="btn" href="/nadia-package/nadia-elementor-site.zip" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        دانلود بسته کامل (.zip)
+      </a>
+    </div>
+
+    <div class="card">
+      <span class="tag">قالب صفحه</span>
+      <h2>خانه</h2>
+      <p>هیرو + شش کارت خدمت + سه نمونه‌کار + نوار رزومه + جعبه تماس.</p>
+      <a class="btn btn--ghost" href="/nadia-package/templates/01-home.json" download="01-home.json">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        دانلود 01-home.json
+      </a>
+    </div>
+
+    <div class="card">
+      <span class="tag">قالب صفحه</span>
+      <h2>خدمات</h2>
+      <p>چهار کارت سئو + دو کارت طراحی + چهار مرحله فرایند + فراخوان.</p>
+      <a class="btn btn--ghost" href="/nadia-package/templates/02-services.json" download="02-services.json">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        دانلود 02-services.json
+      </a>
+    </div>
+
+    <div class="card">
+      <span class="tag">قالب صفحه</span>
+      <h2>نمونه‌کارها</h2>
+      <p>پنج فیلتر + پروژه شاخص + شش کارت نمونه‌کار + فراخوان.</p>
+      <a class="btn btn--ghost" href="/nadia-package/templates/03-portfolio.json" download="03-portfolio.json">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        دانلود 03-portfolio.json
+      </a>
+    </div>
+
+  </div>
+
+  <div class="steps">
+    <h2>روش ایمپورت در وردپرس خودتان</h2>
+    <ol>
+      <li>افزونه <strong>Elementor</strong> (نسخه رایگان) را نصب و فعال کنید.</li>
+      <li><strong>افزونه استایل:</strong> پیشخوان → افزونه‌ها → افزودن → بارگذاری افزونه → فایل <code>nadia-elementor-site.zip</code> → فعال‌سازی.</li>
+      <li><strong>قالب‌ها:</strong> پیشخوان → قالب‌ها → قالب‌های ذخیره‌شده → Import Templates → سه فایل JSON را انتخاب کنید.</li>
+      <li><strong>ساخت صفحه:</strong> برای هر قالب یک برگه بسازید و در ویرایشگر المنتور قالب را Insert کنید.</li>
+      <li>تنظیمات → خواندن → صفحه اصلی: «خانه»؛ و تنظیمات → پیوندهای یکتا → «نام نوشته».</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>
