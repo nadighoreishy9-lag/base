@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>نادیا قریشی — سئو و طراحی وب</title>
+    <meta
+      name="description"
+      content="نادیا قریشی، کارشناس سئو و طراح وب: بهینه‌سازی اصولی سایت برای موتورهای جست‌وجو با نگاهی طراحی‌محور."
+    />
+    <link rel="stylesheet" href="/assets/ngp.css" />
+  </head>
+  <body>
+    <div id="ngp-root"></div>
+
+    <script type="module">
+      const root = document.getElementById("ngp-root");
+
+      try {
+        const response = await fetch("/nadia-elementor-pixel-template.json", { cache: "no-store" });
+        const template = await response.json();
+        root.innerHTML = template.content[0].elements[0].settings.html;
+      } catch (error) {
+        root.textContent = "قالب صفحه بارگذاری نشد.";
+        throw error;
+      }
+
+      // Reload the preview when any file in the repo changes.
+      let currentVersion;
+      setInterval(async () => {
+        try {
+          const response = await fetch("/__version", { cache: "no-store" });
+          const { version } = await response.json();
+          if (currentVersion === undefined) currentVersion = version;
+          else if (version !== currentVersion) location.reload();
+        } catch {
+          /* keep the page as-is while the server restarts */
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
