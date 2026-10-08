@@ -3,10 +3,9 @@
 # ساخت wp-config.php)، سپس راه‌اندازی المنتور/صفحات با bootstrap.sh و در نهایت اجرای وب‌سرور.
 set -eu
 
-# docker-entrypoint.sh تصویر رسمی، setup را انجام می‌دهد و در پایان «exec "$@"» می‌کند؛
-# با `true` فقط setup انجام و بلافاصله خارج می‌شود و ما کنترل را پس می‌گیریم.
-/usr/local/bin/docker-entrypoint.sh true
-
-/bin/sh /source/bin/bootstrap.sh
-
-exec apache2-foreground
+# نکته مهم: docker-entrypoint.sh تصویر رسمی، بلوک آماده‌سازی (کپی هسته + ساخت wp-config.php) را
+# فقط وقتی اجرا می‌کند که آرگومان اول با «apache2*» مطابقت داشته باشد (نسخه‌های جدید تصویر این
+# گارد را اضافه کرده‌اند؛ قبلاً بی‌قید بود). بنابراین به‌جای `true` یک فرمان apache2-... پاس
+# می‌دهیم که خودش ابتدا bootstrap.sh و سپس وب‌سرور را اجرا می‌کند و در پایان کنترل را می‌گیرد.
+export PATH="/source/bin:$PATH"
+exec /usr/local/bin/docker-entrypoint.sh apache2-bootstrap

@@ -15,7 +15,8 @@ wordpress/
   downloads/index.html        صفحه دانلود فایل‌ها (/nadia-downloads/ در پیش‌نمایش)
   bin/build-elementor.py      generates the three JSON templates (source of truth for content)
   bin/bootstrap.sh            provisions WordPress + Elementor and builds the three pages
-  bin/entrypoint-web.sh       web container entrypoint: image setup → bootstrap.sh → apache
+  bin/entrypoint-web.sh       web container entrypoint → docker-entrypoint.sh apache2-bootstrap
+  bin/apache2-bootstrap       bootstrap.sh → apache2-foreground (name must start with "apache2", see quirks #5)
   bin/import-pages.php        creates/updates the three pages from the JSON templates
   Dockerfile.web              wordpress:php8.3-apache + the wp-cli binary (see quirks #2)
   README.md                   handover guide (نصب روی دامنه خودی)
@@ -88,6 +89,14 @@ opening inline; no `.htaccess` is needed.
 4. **Nested bind mounts cannot be created inside a read-only mount.** The download files are
    mounted at sibling paths under `/var/www/html/` (`nadia-downloads/` and `nadia-package/`) rather
    than nesting a file inside the read-only `downloads/` mount.
+5. **The official entrypoint only provisions when `$1` matches `apache2*`.** Newer
+   `wordpress:php8.3-apache` images gate the core-copy + `wp-config.php` block with
+   `[[ "${1-}" == apache2* ]]`, so the previous `docker-entrypoint.sh true` idiom skipped
+   provisioning entirely: the core was never copied into the volume, `bootstrap.sh` waited forever
+   on `wp core version`, and the container never became healthy (the app failed to start).
+   `entrypoint-web.sh` now calls `docker-entrypoint.sh apache2-bootstrap`; `apache2-bootstrap`
+   runs `bootstrap.sh` and then `exec apache2-foreground`. Keep the final command `apache2*`-prefixed
+   and executable (`chmod +x`) — it is exec'd via `PATH`, not run with `sh`.
 
 ## Elementor specifics that this project depends on
 
