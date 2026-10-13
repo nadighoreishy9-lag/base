@@ -47,6 +47,8 @@ services:
       - ./wordpress/nadia-elementor-site.zip:/var/www/html/nadia-package/nadia-elementor-site.zip:ro
       - ./wordpress/nadia-elementor-kit.zip:/var/www/html/nadia-package/nadia-elementor-kit.zip:ro
       - ./wordpress/elementor:/var/www/html/nadia-package/templates:ro
+      # فایل CSS برای روش «CSS افزودنی» (بدون افزونه)
+      - ./wordpress/plugin/nadia-design/assets/nadia.css:/var/www/html/nadia-package/nadia.css:ro
     # راه‌اندازی idempotent (نصب المنتور، زبان فارسی و ساخت سه صفحه) داخل همین سرویس اجرا
     # می‌شود؛ به‌همین دلیل سرویس one-shot جدا وجود ندارد و هیچ سرویسی «exited» نمی‌ماند.
     entrypoint: ["/bin/sh", "/source/bin/entrypoint-web.sh"]

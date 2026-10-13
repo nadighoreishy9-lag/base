@@ -74,8 +74,10 @@
   <h1>دانلود فایل‌های سایت المنتور</h1>
   <p class="lead">
     همه خروجی‌های این سایت از همین‌جا قابل دانلود است: کیت سراسری المنتور (رنگ‌ها و فونت‌های سراسری + سه صفحه)،
-    یا هر قالب صفحه به‌صورت جداگانه. استایل هر قالب داخل خودش قرار دارد؛ برای استفاده به هیچ افزونه‌ای نیاز نیست.
+    بسته کامل با افزونه استایل، یا هر قالب صفحه به‌صورت جداگانه.
     محتوای صفحه‌ها ویجت بومی المنتور است، پس بعد از ایمپورت همه‌چیز از داخل ویرایشگر المنتور قابل تغییر است.
+    <strong>استایل‌ها از فایل <code>nadia.css</code> بارگذاری می‌شوند</strong> — یا با افزونه استایل (خودکار) یا با
+    «ظاهر → سفارشی‌سازی → CSS افزودنی»؛ یکی از این دو لازم است (توضیح پایین صفحه).
   </p>
 
   <div class="grid">
@@ -83,7 +85,7 @@
     <div class="card card--main">
       <span class="tag">پیشنهادی</span>
       <h2>کیت سراسری المنتور — <code>nadia-elementor-kit.zip</code></h2>
-      <p>رنگ‌های سراسری، فونت وزیرمتن و هر سه صفحه (خانه، خدمات، نمونه‌کارها) یک‌جا. بدون نیاز به هیچ افزونه‌ای؛ استایل هر صفحه داخل خودش است.</p>
+      <p>رنگ‌های سراسری، فونت وزیرمتن و هر سه صفحه (خانه، خدمات، نمونه‌کارها) یک‌جا. (استایل‌ها جدا از کیت بارگذاری می‌شوند؛ یکی از دو کارت «استایل» زیر را هم انجام دهید.)</p>
       <a class="btn" href="/nadia-package/nadia-elementor-kit.zip" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
         دانلود کیت المنتور (.zip)
@@ -91,12 +93,22 @@
     </div>
 
     <div class="card">
-      <span class="tag">بسته قدیمی</span>
+      <span class="tag">استایل (خودکار)</span>
       <h2>بسته کامل — <code>nadia-elementor-site.zip</code></h2>
-      <p>نسخه قبلی با افزونه استایل <code>nadia-design</code> + سه قالب + راهنما؛ فقط اگر خود افزونه را می‌خواهید.</p>
+      <p>افزونه استایل <code>nadia-design</code> (شامل <code>nadia.css</code> و تصاویر) + سه قالب + راهنما. ساده‌ترین راه برای داشتن استایل روی همه صفحه‌ها.</p>
       <a class="btn btn--ghost" href="/nadia-package/nadia-elementor-site.zip" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
         دانلود بسته کامل (.zip)
+      </a>
+    </div>
+
+    <div class="card">
+      <span class="tag">استایل (بدون افزونه)</span>
+      <h2>فایل استایل — <code>nadia.css</code></h2>
+      <p>کل استایل سایت در یک فایل. محتوایش را در «ظاهر → سفارشی‌سازی → CSS افزودنی» بچسبانید تا بدون نصب هیچ افزونه‌ای، استایل روی همه صفحه‌ها اعمال شود.</p>
+      <a class="btn btn--ghost" href="/nadia-package/nadia.css" download="nadia.css">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        دانلود nadia.css
       </a>
     </div>
 
@@ -135,7 +147,12 @@
   <div class="steps">
     <h2>روش ایمپورت در وردپرس خودتان</h2>
     <ol>
-      <li>افزونه <strong>Elementor</strong> (نسخه رایگان) را نصب و فعال کنید. هیچ افزونه استایل دیگری لازم نیست.</li>
+      <li>افزونه <strong>Elementor</strong> (نسخه رایگان) را نصب و فعال کنید.</li>
+      <li><strong>استایل‌ها (یکی از این دو، لازم است):</strong>
+        <br>الف) <strong>افزونه استایل:</strong> پیشخوان → افزونه‌ها → افزودن → بارگذاری افزونه → فایل <code>nadia-elementor-site.zip</code> → فعال‌سازی.
+        <br>ب) <strong>بدون افزونه:</strong> فایل <code>nadia.css</code> را دانلود کنید و کل محتوایش را در
+        «ظاهر → سفارشی‌سازی → CSS افزودنی» بچسبانید و انتشار بزنید.
+        <br><em>چرا؟</em> اگر استایل داخل خود صفحه باشد، وردپرس آن را پاک می‌کند و متن CSS به‌صورت متن خام روی صفحه می‌ماند (صفحه بدون استایل و به‌هم‌ریخته) — پس استایل باید از فایل جداگانه بارگذاری شود.</li>
       <li><strong>کیت (پیشنهادی):</strong> پیشخوان → المنتور → Tools → Import/Export Kit → Import Kit → فایل <code>nadia-elementor-kit.zip</code>. رنگ‌ها و فونت سراسری تنظیم می‌شود و هر سه صفحه ساخته می‌شوند.</li>
       <li><strong>یا قالب‌های جداگانه:</strong> پیشخوان → قالب‌ها → قالب‌های ذخیره‌شده → Import Templates → سه فایل JSON را انتخاب کنید و در ویرایشگر Insert کنید.</li>
       <li>تنظیمات → خواندن → صفحه اصلی: «خانه»؛ و تنظیمات → پیوندهای یکتا → «نام نوشته».</li>

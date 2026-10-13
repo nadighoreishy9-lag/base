@@ -11,13 +11,11 @@ from pathlib import Path
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else "wordpress/elementor")
 IMG = "/wp-content/plugins/nadia-design/assets/images/"
 
-# قالب‌ها «خودکفا» ساخته می‌شوند: CSS داخل خود صفحه تزریق می‌شود و تصاویر از دامنه عمومی
-# طراحی لاوایل بارگذاری می‌شوند؛ بنابراین برای استفاده از این قالب‌ها به هیچ افزونه‌ای نیاز نیست.
-CSS_FILE = Path(__file__).resolve().parent.parent / "plugin" / "nadia-design" / "assets" / "nadia.css"
-FONT_IMPORT = (
-    "@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:"
-    "wght@400;500;600;700;800;900&display=swap');"
-)
+# استایل‌ها داخل خود صفحه تزریق نمی‌شوند: وردپرس محتوای صفحه‌های المنتور را هنگام ذخیره
+# با wp_kses_post پاکسازی می‌کند و اگر کاربر مجوز unfiltered_html نداشته باشد (مولتی‌سایت،
+# هاست‌های سخت‌گیر یا حساب غیرمدیر) تگ <style> حذف می‌شود و متن CSS به‌صورت متن خام روی
+# صفحه می‌ماند. بنابراین CSS از فایل nadia.css بارگذاری می‌شود (افزونه nadia-design یا
+# «ظاهر → سفارشی‌سازی → CSS افزودنی»).
 LOVABLE_ASSETS = "https://nadiaghoeyshi.lovable.app/assets/"
 IMG_MAP = {
     "nadia-portrait.jpg": LOVABLE_ASSETS + "nadia-portrait-faTNC5M7.jpg",
@@ -65,12 +63,6 @@ def widget(wtype, settings, cls=None):
         s["_css_classes"] = cls
         s["css_classes"] = cls
     return {"id": eid(), "elType": "widget", "widgetType": wtype, "settings": s, "elements": []}
-
-
-def style_widget():
-    """کل CSS را داخل خود قالب می‌گذارد تا صفحه بدون افزونه استایل داشته باشد."""
-    css = FONT_IMPORT + "\n" + CSS_FILE.read_text(encoding="utf-8")
-    return widget("html", {"html": "<style>\n" + css + "\n</style>"})
 
 
 def rewrite_image_urls(node):
@@ -271,7 +263,7 @@ def timeline_item(number, label, title, body):
 
 
 def page(title, sections):
-    content = container("nd-page", [style_widget(), nav_for(title), *sections, footer()])
+    content = container("nd-page", [nav_for(title), *sections, footer()])
     data = {
         "title": title,
         "type": "page",

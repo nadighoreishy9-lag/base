@@ -7,7 +7,7 @@
  },
  "content": [
   {
-   "id": "000015f",
+   "id": "000015c",
    "elType": "container",
    "settings": {
     "content_width": "full",
@@ -16,16 +16,7 @@
    },
    "elements": [
     {
-     "id": "000014f",
-     "elType": "widget",
-     "widgetType": "html",
-     "settings": {
-      "html": "<style>\n@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');\n/* ==========================================================================\n   Nadia Design — استایل صفحات المنتور\n   برگرفته از دیزاین‌سیستم پروژه اصلی (تم روشن، رنگ بنفش، فونت وزیرمتن، RTL)\n\n   نکته سازگاری: المنتور بسته به تنظیم «Optimized Markup» ممکن است برای ویجت‌ها\n   div.elementor-widget-container و برای کانتینرها div.e-con-inner رندر کند یا نکند.\n   دو قاعده normalize زیر هر دو حالت را یکسان می‌کنند تا همه استایل‌ها روی خود\n   المان اعمال شود.\n   ========================================================================== */\n\n:root {\n  --nd-bg: oklch(0.975 0.01 288);\n  --nd-fg: oklch(0.2 0.035 283);\n  --nd-card: oklch(1 0 0 / 78%);\n  --nd-primary: oklch(0.48 0.18 292);\n  --nd-primary-fg: oklch(0.985 0.004 290);\n  --nd-secondary: oklch(0.91 0.035 292);\n  --nd-secondary-fg: oklch(0.3 0.08 292);\n  --nd-accent: oklch(0.86 0.055 200);\n  --nd-accent-fg: oklch(0.25 0.045 215);\n  --nd-border: oklch(0.88 0.025 288);\n  --nd-surface: oklch(1 0 0 / 66%);\n  --nd-surface-strong: oklch(0.93 0.04 292);\n  --nd-muted-fg: oklch(0.5 0.03 282);\n  --nd-cyan: oklch(0.72 0.11 205);\n  --nd-shell: 72rem;\n  --nd-pad: max(1.5rem, calc((100% - var(--nd-shell)) / 2));\n  --nd-shadow-soft: 0 24px 70px -32px color-mix(in oklab, var(--nd-fg) 20%, transparent);\n  --nd-shadow-violet: 0 24px 70px -34px color-mix(in oklab, oklch(0.58 0.18 292) 38%, transparent);\n  --nd-ico-sparkle: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2'/%3E%3C/svg%3E\");\n  --nd-ico-check: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E\");\n  --nd-ico-arrow: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17V7h10'/%3E%3Cpath d='M17 17 7 7'/%3E%3C/svg%3E\");\n  --nd-ico-left: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 19-7-7 7-7'/%3E%3Cpath d='M19 12H5'/%3E%3C/svg%3E\");\n  --nd-ico-down: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12'/%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3Cpath d='M5 21h14'/%3E%3C/svg%3E\");\n}\n\nbody {\n  background-color: var(--nd-bg);\n  color: var(--nd-fg);\n  font-family: \"Vazirmatn\", \"IRANSansX\", \"Segoe UI\", Tahoma, sans-serif;\n}\n\nbody .nd-page {\n  direction: rtl;\n  text-align: right;\n  background-color: var(--nd-bg);\n  color: var(--nd-fg);\n  font-family: \"Vazirmatn\", \"IRANSansX\", \"Segoe UI\", Tahoma, sans-serif;\n  overflow-x: hidden;\n}\n\nbody .nd-page img {\n  max-width: 100%;\n  height: auto;\n}\n\nbody .nd-page ::selection {\n  background: color-mix(in oklab, var(--nd-primary) 25%, transparent);\n}\n\n/* ---------- normalize: حذف لایه‌های واسط المنتور ------------------------- */\n\nbody .nd-page .e-con-inner,\nbody .nd-page .elementor-widget-container {\n  display: contents;\n}\n\nbody .nd-page .e-con {\n  --flex-direction: column;\n}\n\nbody .nd-page .elementor-widget {\n  --flex-direction: column;\n}\n\n/* ---------- بلوک‌های پایه ------------------------------------------------- */\n\nbody .nd-page .nd-glass {\n  background: var(--nd-surface);\n  border: 1px solid color-mix(in oklab, var(--nd-border) 72%, transparent);\n  box-shadow: var(--nd-shadow-soft);\n  backdrop-filter: blur(18px);\n  -webkit-backdrop-filter: blur(18px);\n}\n\nbody .nd-page .nd-accent {\n  color: var(--nd-primary);\n}\n\nbody .nd-page .nd-strong {\n  color: var(--nd-primary);\n  font-weight: 700;\n}\n\nbody .nd-page .nd-center {\n  text-align: center;\n}\n\nbody .nd-page .nd-eyebrow,\nbody .nd-page .nd-eyebrow .elementor-heading-title {\n  color: var(--nd-primary);\n  font-size: 1rem;\n  font-weight: 700;\n}\n\nbody .nd-page .nd-h2 .elementor-heading-title {\n  font-size: clamp(1.75rem, 4vw, 2.75rem);\n  font-weight: 900;\n  line-height: 1.25;\n}\n\nbody .nd-page .nd-h3 .elementor-heading-title {\n  font-size: 1.25rem;\n  font-weight: 800;\n}\n\nbody .nd-page .nd-muted,\nbody .nd-page .nd-muted p {\n  color: var(--nd-muted-fg);\n  line-height: 2rem;\n}\n\nbody .nd-page .nd-muted p {\n  margin: 0;\n}\n\nbody .nd-page .nd-reveal {\n  animation: nd-reveal 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\nbody .nd-page .nd-reveal-delay {\n  animation-delay: 0.15s;\n}\n\n@keyframes nd-reveal {\n  from {\n    opacity: 0;\n    transform: translateY(18px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n/* ---------- دکمه‌ها ------------------------------------------------------- */\n\nbody .nd-page .nd-btn .elementor-button,\nbody .nd-page .nd-cta .elementor-button {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.5rem;\n  padding: 0.875rem 1.5rem;\n  border: 0;\n  border-radius: 0.75rem;\n  font-family: inherit;\n  font-size: 1rem;\n  font-weight: 700;\n  line-height: 1.6;\n  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;\n}\n\nbody .nd-page .nd-btn .elementor-button:hover,\nbody .nd-page .nd-cta .elementor-button:hover {\n  transform: translateY(-2px);\n}\n\nbody .nd-page .nd-btn-primary .elementor-button {\n  background-color: var(--nd-primary);\n  color: var(--nd-primary-fg);\n  box-shadow: var(--nd-shadow-violet);\n}\n\nbody .nd-page .nd-btn-ghost .elementor-button {\n  background: var(--nd-surface);\n  border: 1px solid color-mix(in oklab, var(--nd-border) 72%, transparent);\n  color: var(--nd-fg);\n  backdrop-filter: blur(18px);\n  -webkit-backdrop-filter: blur(18px);\n}\n\nbody .nd-page .nd-btn-dark .elementor-button {\n  background-color: var(--nd-fg);\n  color: var(--nd-bg);\n}\n\nbody .nd-page .nd-btn-light .elementor-button {\n  background-color: var(--nd-bg);\n  color: var(--nd-fg);\n}\n\nbody .nd-page .nd-link-btn .elementor-button {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.5rem;\n  padding: 0;\n  background: none;\n  color: var(--nd-primary);\n  font-size: 0.875rem;\n  font-weight: 700;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-link-btn .elementor-button:hover {\n  color: color-mix(in oklab, var(--nd-primary) 80%, transparent);\n  transform: none;\n}\n\nbody .nd-page .nd-link-btn .elementor-button::after {\n  content: \"\";\n  width: 1rem;\n  height: 1rem;\n  background-color: currentColor;\n  -webkit-mask: var(--nd-ico-left) center / contain no-repeat;\n  mask: var(--nd-ico-left) center / contain no-repeat;\n}\n\n/* ---------- هدر و ناوبری -------------------------------------------------- */\n\nbody .nd-page .nd-header {\n  position: fixed;\n  inset-inline: 0;\n  top: 0;\n  z-index: 50;\n  display: block;\n  padding: 1rem 1rem 0;\n  background: none;\n  border: 0;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-nav {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n  max-width: 72rem;\n  margin-inline: auto;\n  padding: 0.75rem 1rem;\n  border-radius: 1rem;\n}\n\nbody .nd-page .nd-brand {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 0.75rem;\n  flex: 0 0 auto;\n}\n\nbody .nd-page .nd-brand-mark {\n  flex: 0 0 auto;\n}\n\nbody .nd-page .nd-brand-mark .elementor-heading-title {\n  display: grid;\n  place-items: center;\n  width: 2.25rem;\n  height: 2.25rem;\n  border-radius: 0.75rem;\n  background-color: var(--nd-primary);\n  color: var(--nd-primary-fg);\n  font-size: 1rem;\n  font-weight: 800;\n}\n\nbody .nd-page .nd-brand-name .elementor-heading-title {\n  font-size: 1rem;\n  font-weight: 800;\n  color: var(--nd-fg);\n}\n\nbody .nd-page .nd-menu {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 1.75rem;\n}\n\nbody .nd-page .nd-menu-link .elementor-button {\n  padding: 0;\n  background: none;\n  color: var(--nd-muted-fg);\n  box-shadow: none;\n  font-size: 0.875rem;\n  font-weight: 600;\n}\n\nbody .nd-page .nd-menu-link .elementor-button:hover {\n  color: var(--nd-fg);\n  transform: none;\n}\n\nbody .nd-page .nd-menu-link-active .elementor-button {\n  color: var(--nd-fg);\n  font-weight: 700;\n}\n\nbody .nd-page .nd-cta .elementor-button {\n  padding: 0.5rem 1rem;\n  border-radius: 0.75rem;\n  font-size: 0.875rem;\n  font-weight: 600;\n}\n\n/* ---------- هیرو صفحه اصلی ------------------------------------------------ */\n\nbody .nd-page .nd-hero {\n  display: grid;\n  grid-template-columns: 1.15fr 0.85fr;\n  align-items: center;\n  gap: 3rem;\n  min-height: 78vh;\n  padding: 9rem var(--nd-pad) 4rem;\n  background: none;\n  border: 0;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-hero-copy {\n  display: flex;\n  flex-direction: column;\n  min-width: 0;\n}\n\nbody .nd-page .nd-kicker {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 0.5rem;\n  width: fit-content;\n  padding: 0.5rem 1rem;\n  border-radius: 999px;\n  background-color: var(--nd-secondary);\n}\n\nbody .nd-page .nd-kicker::before {\n  content: \"\";\n  flex: 0 0 auto;\n  width: 1rem;\n  height: 1rem;\n  background-color: var(--nd-primary);\n  -webkit-mask: var(--nd-ico-sparkle) center / contain no-repeat;\n  mask: var(--nd-ico-sparkle) center / contain no-repeat;\n}\n\nbody .nd-page .nd-kicker-text .elementor-heading-title {\n  font-size: 0.875rem;\n  font-weight: 700;\n  color: var(--nd-secondary-fg);\n  white-space: nowrap;\n}\n\nbody .nd-page .nd-hello .elementor-heading-title {\n  margin-top: 1.75rem;\n  color: var(--nd-primary);\n  font-size: 1.125rem;\n  font-weight: 700;\n}\n\nbody .nd-page .nd-hero-title .elementor-heading-title {\n  margin-top: 0.75rem;\n  max-width: 48rem;\n  font-size: clamp(2.25rem, 5.5vw, 4.25rem);\n  font-weight: 900;\n  line-height: 1.15;\n}\n\nbody .nd-page .nd-lead {\n  margin-top: 1.75rem;\n  max-width: 42rem;\n  color: var(--nd-muted-fg);\n  font-size: 1.125rem;\n  line-height: 2.25rem;\n}\n\nbody .nd-page .nd-lead p {\n  margin: 0;\n}\n\nbody .nd-page .nd-actions {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  gap: 0.75rem;\n  margin-top: 2.25rem;\n}\n\nbody .nd-page .nd-portrait-wrap {\n  position: relative;\n  display: block;\n  width: 100%;\n  max-width: 28rem;\n  justify-self: end;\n}\n\nbody .nd-page .nd-portrait-wrap::before {\n  content: \"\";\n  position: absolute;\n  inset: -2rem;\n  border-radius: 4rem;\n  background-color: var(--nd-secondary);\n  filter: blur(48px);\n  z-index: 0;\n}\n\nbody .nd-page .nd-portrait-card {\n  position: relative;\n  z-index: 1;\n  display: block;\n  padding: 0.75rem;\n  border-radius: 2rem;\n}\n\nbody .nd-page .nd-portrait-img img {\n  width: 100%;\n  aspect-ratio: 4 / 5;\n  object-fit: cover;\n  border-radius: 1.4rem;\n}\n\nbody .nd-page .nd-portrait-caption {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem 0.75rem 0.25rem;\n}\n\nbody .nd-page .nd-caption-strong .elementor-heading-title,\nbody .nd-page .nd-caption-muted .elementor-heading-title {\n  font-size: 0.875rem;\n}\n\nbody .nd-page .nd-caption-strong .elementor-heading-title {\n  font-weight: 700;\n}\n\nbody .nd-page .nd-caption-muted .elementor-heading-title {\n  color: var(--nd-muted-fg);\n  font-weight: 500;\n}\n\n/* ---------- بخش‌ها ------------------------------------------------------- */\n\nbody .nd-page .nd-section {\n  display: flex;\n  flex-direction: column;\n  padding: 6rem var(--nd-pad);\n  background: none;\n  border: 0;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-surface {\n  background-color: var(--nd-surface);\n  border-block: 1px solid var(--nd-border);\n}\n\nbody .nd-page .nd-section-head {\n  display: block;\n  max-width: 42rem;\n}\n\nbody .nd-page .nd-section-head .nd-h2 .elementor-heading-title {\n  margin-top: 0.75rem;\n}\n\nbody .nd-page .nd-section-head .nd-muted {\n  margin-top: 1.25rem;\n}\n\nbody .nd-page .nd-section-head .nd-link-btn {\n  margin-top: 1.25rem;\n}\n\nbody .nd-page .nd-head-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: flex-end;\n  justify-content: space-between;\n  gap: 1.25rem;\n}\n\nbody .nd-page .nd-head-main {\n  display: block;\n}\n\nbody .nd-page .nd-head-aside {\n  max-width: 28rem;\n  color: var(--nd-muted-fg);\n  line-height: 1.75rem;\n}\n\nbody .nd-page .nd-head-aside p {\n  margin: 0;\n}\n\nbody .nd-page .nd-grid {\n  display: grid;\n  gap: 1.25rem;\n  margin-top: 3rem;\n}\n\nbody .nd-page .nd-grid-3 {\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n}\n\nbody .nd-page .nd-grid-2 {\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 1.5rem;\n}\n\n/* ---------- کارت خدمات --------------------------------------------------- */\n\nbody .nd-page .nd-card {\n  display: block;\n  padding: 1.5rem;\n  border-radius: 1rem;\n  transition: transform 0.3s ease;\n}\n\nbody .nd-page .nd-card:hover {\n  transform: translateY(-4px);\n}\n\nbody .nd-page .nd-card-top {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\nbody .nd-page .nd-card-icon .elementor-icon {\n  display: grid;\n  place-items: center;\n  width: 2.75rem;\n  height: 2.75rem;\n  border-radius: 0.75rem;\n  background-color: var(--nd-secondary);\n  color: var(--nd-primary);\n  font-size: 1.25rem;\n}\n\nbody .nd-page .nd-card-icon .elementor-icon svg {\n  width: 1.25rem;\n  height: 1.25rem;\n}\n\nbody .nd-page .nd-tag .elementor-heading-title {\n  padding: 0.25rem 0.75rem;\n  border-radius: 999px;\n  background-color: var(--nd-accent);\n  color: var(--nd-accent-fg);\n  font-size: 0.75rem;\n  font-weight: 700;\n  white-space: nowrap;\n}\n\nbody .nd-page .nd-card .nd-h3 .elementor-heading-title {\n  margin-top: 1.5rem;\n}\n\nbody .nd-page .nd-card .nd-muted {\n  margin-top: 0.75rem;\n  line-height: 1.75rem;\n}\n\n/* ---------- نمونه‌کارها -------------------------------------------------- */\n\nbody .nd-page .nd-project {\n  display: block;\n  overflow: hidden;\n  border: 1px solid var(--nd-border);\n  border-radius: 1rem;\n  background-color: var(--nd-card);\n  box-shadow: var(--nd-shadow-soft);\n}\n\nbody .nd-page .nd-project-img {\n  overflow: hidden;\n}\n\nbody .nd-page .nd-project-img img {\n  width: 100%;\n  aspect-ratio: 4 / 3;\n  object-fit: cover;\n  transition: transform 0.5s ease;\n}\n\nbody .nd-page .nd-project:hover .nd-project-img img {\n  transform: scale(1.03);\n}\n\nbody .nd-page .nd-project-body {\n  display: block;\n  padding: 1.5rem;\n}\n\nbody .nd-page .nd-project-meta {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\nbody .nd-page .nd-project-type .elementor-heading-title {\n  color: var(--nd-primary);\n  font-size: 0.75rem;\n  font-weight: 700;\n}\n\nbody .nd-page .nd-project .nd-h3 .elementor-heading-title {\n  margin-top: 0.75rem;\n  font-size: 1.25rem;\n}\n\nbody .nd-page .nd-project .nd-muted {\n  margin-top: 0.75rem;\n}\n\nbody .nd-page .nd-project-arrow {\n  flex: 0 0 auto;\n}\n\nbody .nd-page .nd-project-arrow .elementor-icon {\n  color: var(--nd-muted-fg);\n}\n\nbody .nd-page .nd-project-arrow .elementor-icon svg {\n  width: 1rem;\n  height: 1rem;\n}\n\nbody .nd-page .nd-cta-row {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  margin-top: 2.5rem;\n}\n\n/* ---------- نوار رزومه (تیره) ------------------------------------------ */\n\nbody .nd-page .nd-band {\n  display: grid;\n  grid-template-columns: 0.8fr 1.2fr;\n  align-items: start;\n  gap: 4rem;\n  padding: 6rem var(--nd-pad);\n  background-color: var(--nd-fg);\n  color: var(--nd-bg);\n  border: 0;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-band-left {\n  display: block;\n}\n\nbody .nd-page .nd-band-eyebrow .elementor-heading-title {\n  color: var(--nd-cyan);\n  font-size: 1rem;\n  font-weight: 700;\n}\n\nbody .nd-page .nd-band .nd-h2 .elementor-heading-title {\n  margin-top: 0.75rem;\n  color: var(--nd-bg);\n  font-size: clamp(1.75rem, 4vw, 2.75rem);\n  font-weight: 900;\n  line-height: 1.25;\n}\n\nbody .nd-page .nd-band-text {\n  margin-top: 1.5rem;\n  color: color-mix(in oklab, var(--nd-bg) 70%, transparent);\n  line-height: 2rem;\n}\n\nbody .nd-page .nd-band-text p {\n  margin: 0;\n}\n\nbody .nd-page .nd-band-btn {\n  display: inline-flex;\n  margin-top: 2rem;\n}\n\nbody .nd-page .nd-timeline {\n  display: grid;\n  gap: 1.25rem;\n}\n\nbody .nd-page .nd-timeline-item {\n  display: flex;\n  flex-direction: row;\n  gap: 1.25rem;\n  padding: 1.5rem;\n  border: 1px solid color-mix(in oklab, var(--nd-bg) 15%, transparent);\n  border-radius: 1rem;\n  background-color: color-mix(in oklab, var(--nd-bg) 5%, transparent);\n}\n\nbody .nd-page .nd-step-num {\n  flex: 0 0 auto;\n}\n\nbody .nd-page .nd-step-num .elementor-heading-title {\n  display: grid;\n  place-items: center;\n  width: 2.5rem;\n  height: 2.5rem;\n  border-radius: 999px;\n  background-color: var(--nd-primary);\n  color: var(--nd-primary-fg);\n  font-size: 1rem;\n  font-weight: 900;\n}\n\nbody .nd-page .nd-timeline-body {\n  display: block;\n  min-width: 0;\n}\n\nbody .nd-page .nd-step-label .elementor-heading-title {\n  color: color-mix(in oklab, var(--nd-bg) 55%, transparent);\n  font-size: 0.875rem;\n  font-weight: 500;\n}\n\nbody .nd-page .nd-timeline-body .nd-h3 .elementor-heading-title {\n  margin-top: 0.25rem;\n  color: var(--nd-bg);\n  font-size: 1.25rem;\n  font-weight: 800;\n}\n\nbody .nd-page .nd-band .nd-muted {\n  margin-top: 0.75rem;\n  color: color-mix(in oklab, var(--nd-bg) 65%, transparent);\n  font-size: 1rem;\n  line-height: 1.75rem;\n}\n\n/* ---------- تماس و فوتر -------------------------------------------------- */\n\nbody .nd-page .nd-contact-box {\n  position: relative;\n  display: block;\n  overflow: hidden;\n  padding: 4rem 2rem;\n  border-radius: 1.5rem;\n  text-align: center;\n}\n\nbody .nd-page .nd-contact-box::before {\n  content: \"\";\n  position: absolute;\n  top: -6rem;\n  inset-inline: 25%;\n  height: 12rem;\n  border-radius: 999px;\n  background-color: var(--nd-secondary);\n  filter: blur(48px);\n}\n\nbody .nd-page .nd-contact-inner {\n  position: relative;\n  z-index: 1;\n  display: block;\n}\n\nbody .nd-page .nd-contact-icon {\n  display: flex;\n  justify-content: center;\n}\n\nbody .nd-page .nd-contact-icon .elementor-icon {\n  color: var(--nd-primary);\n}\n\nbody .nd-page .nd-contact-icon .elementor-icon svg {\n  width: 2rem;\n  height: 2rem;\n}\n\nbody .nd-page .nd-contact-title .elementor-heading-title {\n  margin-top: 1.25rem;\n  font-size: clamp(1.75rem, 4vw, 2.75rem);\n  font-weight: 900;\n  line-height: 1.25;\n}\n\nbody .nd-page .nd-contact-text {\n  max-width: 36rem;\n  margin: 1.25rem auto 0;\n  color: var(--nd-muted-fg);\n  line-height: 2rem;\n}\n\nbody .nd-page .nd-contact-text p {\n  margin: 0;\n}\n\nbody .nd-page .nd-contact-links {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n  gap: 0.75rem;\n  margin-top: 2rem;\n}\n\nbody .nd-page .nd-chip .elementor-heading-title {\n  padding: 0.75rem 1.25rem;\n  border: 1px solid var(--nd-border);\n  border-radius: 0.75rem;\n  background-color: var(--nd-bg);\n  color: var(--nd-fg);\n  font-size: 1rem;\n  font-weight: 700;\n  white-space: nowrap;\n}\n\nbody .nd-page .nd-chip-primary .elementor-heading-title {\n  border-color: transparent;\n  background-color: var(--nd-primary);\n  color: var(--nd-primary-fg);\n}\n\nbody .nd-page .nd-footer {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: space-between;\n  gap: 0.75rem;\n  padding: 2rem var(--nd-pad);\n  border-top: 1px solid var(--nd-border);\n  background: none;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-footer .elementor-heading-title {\n  color: var(--nd-muted-fg);\n  font-size: 0.875rem;\n  font-weight: 500;\n}\n\n/* ---------- هیرو صفحات داخلی (خدمات / نمونه‌کار) ------------------------ */\n\nbody .nd-page .nd-page-hero {\n  position: relative;\n  display: block;\n  padding: 9rem var(--nd-pad) 2.5rem;\n  text-align: center;\n  background: none;\n  border: 0;\n  box-shadow: none;\n}\n\nbody .nd-page .nd-page-hero::before {\n  content: \"\";\n  position: absolute;\n  top: 4rem;\n  inset-inline: 25%;\n  height: 14rem;\n  border-radius: 999px;\n  background-color: var(--nd-secondary);\n  filter: blur(48px);\n  z-index: 0;\n}\n\nbody .nd-page .nd-page-hero > * {\n  position: relative;\n  z-index: 1;\n}\n\nbody .nd-page .nd-page-title .elementor-heading-title {\n  max-width: 48rem;\n  margin: 1rem auto 0;\n  font-size: clamp(2rem, 5vw, 3.75rem);\n  font-weight: 900;\n  line-height: 1.2;\n}\n\nbody .nd-page .nd-page-hero .nd-muted {\n  max-width: 42rem;\n  margin: 1.5rem auto 0;\n  color: var(--nd-muted-fg);\n  font-size: 1.125rem;\n  line-height: 2.25rem;\n}\n\n/* ---------- جداکننده و کارت‌های جزئیات خدمات ---------------------------- */\n\nbody .nd-page .nd-divider {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 0.75rem;\n}\n\nbody .nd-page .nd-divider-line {\n  flex: 1 1 auto;\n  height: 1px;\n  background-color: var(--nd-border);\n}\n\nbody .nd-page .nd-divider-label .elementor-heading-title {\n  color: var(--nd-primary);\n  font-size: 0.875rem;\n  font-weight: 700;\n  white-space: nowrap;\n}\n\nbody .nd-page .nd-detail {\n  position: relative;\n  display: block;\n  overflow: hidden;\n  padding: 2rem;\n  border-radius: 1.5rem;\n}\n\nbody .nd-page .nd-detail-lined::before {\n  content: \"\";\n  position: absolute;\n  inset-inline: 0;\n  top: 0;\n  height: 4px;\n  background: linear-gradient(to left, var(--nd-primary), var(--nd-secondary));\n}\n\nbody .nd-page .nd-detail-icon .elementor-icon {\n  display: grid;\n  place-items: center;\n  width: 3rem;\n  height: 3rem;\n  border-radius: 1rem;\n  background-color: var(--nd-secondary);\n  color: var(--nd-primary);\n}\n\nbody .nd-page .nd-detail-icon .elementor-icon svg {\n  width: 1.5rem;\n  height: 1.5rem;\n}\n\nbody .nd-page .nd-detail .nd-h3 .elementor-heading-title {\n  margin-top: 1.5rem;\n  font-size: 1.5rem;\n}\n\nbody .nd-page .nd-detail .nd-muted {\n  margin-top: 1rem;\n}\n\nbody .nd-page .nd-list {\n  margin-top: 1.5rem;\n  font-size: 0.875rem;\n}\n\nbody .nd-page .nd-list ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  display: grid;\n  gap: 0.75rem;\n}\n\nbody .nd-page .nd-list li {\n  display: flex;\n  gap: 0.75rem;\n  line-height: 1.75rem;\n  color: var(--nd-muted-fg);\n}\n\nbody .nd-page .nd-list li::before {\n  content: \"\";\n  flex: 0 0 auto;\n  width: 1rem;\n  height: 1rem;\n  margin-top: 0.5rem;\n  background-color: var(--nd-primary);\n  -webkit-mask: var(--nd-ico-check) center / contain no-repeat;\n  mask: var(--nd-ico-check) center / contain no-repeat;\n}\n\nbody .nd-page .nd-deliverable {\n  margin-top: 1.5rem;\n  padding: 1rem;\n  border: 1px solid var(--nd-border);\n  border-radius: 1rem;\n  background-color: color-mix(in oklab, var(--nd-bg) 60%, transparent);\n  font-size: 0.875rem;\n  line-height: 1.75rem;\n}\n\nbody .nd-page .nd-deliverable p {\n  margin: 0;\n}\n\n/* ---------- روند همکاری -------------------------------------------------- */\n\nbody .nd-page .nd-process {\n  display: block;\n  padding: 3rem;\n  border: 1px solid var(--nd-border);\n  border-radius: 1.5rem;\n  background-color: var(--nd-card);\n  box-shadow: var(--nd-shadow-soft);\n}\n\nbody .nd-page .nd-steps {\n  display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  gap: 1.25rem;\n  margin-top: 2.5rem;\n}\n\nbody .nd-page .nd-step-card {\n  display: block;\n  padding: 1.5rem;\n  border-radius: 1rem;\n}\n\nbody .nd-page .nd-step-badge .elementor-heading-title {\n  display: grid;\n  place-items: center;\n  width: 2.25rem;\n  height: 2.25rem;\n  border-radius: 999px;\n  background-color: var(--nd-primary);\n  color: var(--nd-primary-fg);\n  font-size: 1rem;\n  font-weight: 900;\n}\n\nbody .nd-page .nd-step-card .nd-h3 .elementor-heading-title {\n  margin-top: 1rem;\n  font-size: 1.125rem;\n}\n\nbody .nd-page .nd-step-card .nd-muted {\n  margin-top: 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.75rem;\n}\n\n/* ---------- صفحه نمونه‌کارها -------------------------------------------- */\n\nbody .nd-page .nd-filters {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 0.5rem;\n  margin-top: 2rem;\n}\n\nbody .nd-page .nd-filter .elementor-heading-title {\n  padding: 0.5rem 1rem;\n  border-radius: 999px;\n  background: var(--nd-surface);\n  border: 1px solid color-mix(in oklab, var(--nd-border) 72%, transparent);\n  box-shadow: var(--nd-shadow-soft);\n  backdrop-filter: blur(18px);\n  -webkit-backdrop-filter: blur(18px);\n  font-size: 0.875rem;\n  font-weight: 600;\n}\n\nbody .nd-page .nd-featured {\n  display: grid;\n  grid-template-columns: 1.15fr 0.85fr;\n  overflow: hidden;\n  border: 1px solid var(--nd-border);\n  border-radius: 1.5rem;\n  background-color: var(--nd-card);\n  box-shadow: var(--nd-shadow-soft);\n}\n\nbody .nd-page .nd-featured-img {\n  height: 100%;\n}\n\nbody .nd-page .nd-featured-img img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\nbody .nd-page .nd-featured-body {\n  display: block;\n  padding: 2.5rem;\n}\n\nbody .nd-page .nd-badge-accent .elementor-heading-title {\n  display: inline-block;\n  padding: 0.25rem 0.75rem;\n  border-radius: 999px;\n  background-color: var(--nd-accent);\n  color: var(--nd-accent-fg);\n  font-size: 0.75rem;\n  font-weight: 700;\n}\n\nbody .nd-page .nd-featured-body .nd-h2 .elementor-heading-title {\n  margin-top: 1.25rem;\n  font-size: clamp(1.75rem, 3.5vw, 2.5rem);\n}\n\nbody .nd-page .nd-featured-body .nd-muted {\n  margin-top: 1.25rem;\n}\n\nbody .nd-page .nd-points {\n  margin-top: 1.5rem;\n}\n\nbody .nd-page .nd-points ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  display: grid;\n  gap: 0.75rem;\n  color: var(--nd-muted-fg);\n}\n\nbody .nd-page .nd-points li {\n  display: flex;\n  gap: 0.75rem;\n  line-height: 1.75rem;\n}\n\nbody .nd-page .nd-points li::before {\n  content: \"\";\n  flex: 0 0 auto;\n  width: 1rem;\n  height: 1rem;\n  margin-top: 0.5rem;\n  background-color: var(--nd-primary);\n  -webkit-mask: var(--nd-ico-arrow) center / contain no-repeat;\n  mask: var(--nd-ico-arrow) center / contain no-repeat;\n}\n\nbody .nd-page .nd-work {\n  display: block;\n  overflow: hidden;\n  border: 1px solid var(--nd-border);\n  border-radius: 1rem;\n  background-color: var(--nd-card);\n  box-shadow: var(--nd-shadow-soft);\n  transition: transform 0.3s ease;\n}\n\nbody .nd-page .nd-work:hover {\n  transform: translateY(-4px);\n}\n\nbody .nd-page .nd-work-img {\n  overflow: hidden;\n}\n\nbody .nd-page .nd-work-img img {\n  width: 100%;\n  aspect-ratio: 4 / 3;\n  object-fit: cover;\n  transition: transform 0.5s ease;\n}\n\nbody .nd-page .nd-work:hover .nd-work-img img {\n  transform: scale(1.04);\n}\n\nbody .nd-page .nd-work-body {\n  display: block;\n  padding: 1.75rem;\n}\n\nbody .nd-page .nd-work-meta {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 0.75rem;\n}\n\nbody .nd-page .nd-work-icon .elementor-icon {\n  display: grid;\n  place-items: center;\n  width: 2.5rem;\n  height: 2.5rem;\n  border-radius: 0.75rem;\n  background-color: var(--nd-secondary);\n  color: var(--nd-primary);\n}\n\nbody .nd-page .nd-work-icon .elementor-icon svg {\n  width: 1.25rem;\n  height: 1.25rem;\n}\n\nbody .nd-page .nd-work-tag .elementor-heading-title {\n  color: var(--nd-primary);\n  font-size: 0.75rem;\n  font-weight: 700;\n}\n\nbody .nd-page .nd-work-body .nd-h3 .elementor-heading-title {\n  margin-top: 1.25rem;\n  font-size: 1.5rem;\n}\n\nbody .nd-page .nd-work-body .nd-muted {\n  margin-top: 0.75rem;\n}\n\nbody .nd-page .nd-chips {\n  margin-top: 1.25rem;\n}\n\nbody .nd-page .nd-chips ul {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 0.5rem;\n}\n\nbody .nd-page .nd-chips li {\n  padding: 0.375rem 0.75rem;\n  border-radius: 999px;\n  background-color: var(--nd-surface-strong);\n  color: var(--nd-muted-fg);\n  font-size: 0.875rem;\n}\n\n/* ---------- واکنش‌گرایی -------------------------------------------------- */\n\n@media (max-width: 1024px) {\n  body .nd-page .nd-grid-3,\n  body .nd-page .nd-steps {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n\n  body .nd-page .nd-band,\n  body .nd-page .nd-featured,\n  body .nd-page .nd-hero {\n    grid-template-columns: 1fr;\n    gap: 2.5rem;\n  }\n\n  body .nd-page .nd-hero {\n    min-height: 0;\n  }\n\n  body .nd-page .nd-portrait-wrap {\n    justify-self: center;\n  }\n}\n\n@media (max-width: 767px) {\n  body .nd-page .nd-header {\n    padding: 0.75rem 0.75rem 0;\n  }\n\n  body .nd-page .nd-nav {\n    flex-wrap: wrap;\n  }\n\n  body .nd-page .nd-menu {\n    order: 3;\n    width: 100%;\n    justify-content: space-between;\n    gap: 0.75rem;\n  }\n\n  body .nd-page .nd-menu-link .elementor-button {\n    font-size: 0.8125rem;\n  }\n\n  body .nd-page .nd-grid-3,\n  body .nd-page .nd-grid-2,\n  body .nd-page .nd-steps {\n    grid-template-columns: 1fr;\n  }\n\n  body .nd-page .nd-hero,\n  body .nd-page .nd-section,\n  body .nd-page .nd-band,\n  body .nd-page .nd-page-hero {\n    padding-inline: 1rem;\n  }\n\n  body .nd-page .nd-section,\n  body .nd-page .nd-band {\n    padding-block: 3.5rem;\n  }\n\n  body .nd-page .nd-detail,\n  body .nd-page .nd-process,\n  body .nd-page .nd-featured-body {\n    padding: 1.5rem;\n  }\n\n  body .nd-page .nd-contact-box {\n    padding: 2.5rem 1.25rem;\n  }\n\n  body .nd-page .nd-cta {\n    display: none;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  body .nd-page .nd-reveal {\n    animation: none;\n  }\n\n  body .nd-page .nd-project-img img,\n  body .nd-page .nd-work-img img {\n    transition: none;\n  }\n}\n\n</style>"
-     },
-     "elements": []
-    },
-    {
-     "id": "000015b",
+     "id": "0000158",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -34,7 +25,7 @@
      },
      "elements": [
       {
-       "id": "000015a",
+       "id": "0000157",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -43,7 +34,7 @@
        },
        "elements": [
         {
-         "id": "0000152",
+         "id": "000014f",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -52,7 +43,7 @@
          },
          "elements": [
           {
-           "id": "0000150",
+           "id": "000014d",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -69,7 +60,7 @@
            "elements": []
           },
           {
-           "id": "0000151",
+           "id": "000014e",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -89,7 +80,7 @@
          "isInner": false
         },
         {
-         "id": "0000158",
+         "id": "0000155",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -98,7 +89,7 @@
          },
          "elements": [
           {
-           "id": "0000153",
+           "id": "0000150",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -114,7 +105,7 @@
            "elements": []
           },
           {
-           "id": "0000154",
+           "id": "0000151",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -130,7 +121,7 @@
            "elements": []
           },
           {
-           "id": "0000155",
+           "id": "0000152",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -146,7 +137,7 @@
            "elements": []
           },
           {
-           "id": "0000156",
+           "id": "0000153",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -162,7 +153,7 @@
            "elements": []
           },
           {
-           "id": "0000157",
+           "id": "0000154",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -181,7 +172,7 @@
          "isInner": false
         },
         {
-         "id": "0000159",
+         "id": "0000156",
          "elType": "widget",
          "widgetType": "button",
          "settings": {
@@ -203,7 +194,7 @@
      "isInner": false
     },
     {
-     "id": "0000106",
+     "id": "0000104",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -212,7 +203,7 @@
      },
      "elements": [
       {
-       "id": "00000fd",
+       "id": "00000fb",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -224,7 +215,7 @@
        "elements": []
       },
       {
-       "id": "00000fe",
+       "id": "00000fc",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -236,7 +227,7 @@
        "elements": []
       },
       {
-       "id": "00000ff",
+       "id": "00000fd",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -247,7 +238,7 @@
        "elements": []
       },
       {
-       "id": "0000105",
+       "id": "0000103",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -256,7 +247,7 @@
        },
        "elements": [
         {
-         "id": "0000100",
+         "id": "00000fe",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -268,7 +259,7 @@
          "elements": []
         },
         {
-         "id": "0000101",
+         "id": "00000ff",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -280,7 +271,7 @@
          "elements": []
         },
         {
-         "id": "0000102",
+         "id": "0000100",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -292,7 +283,7 @@
          "elements": []
         },
         {
-         "id": "0000103",
+         "id": "0000101",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -304,7 +295,7 @@
          "elements": []
         },
         {
-         "id": "0000104",
+         "id": "0000102",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -322,7 +313,7 @@
      "isInner": false
     },
     {
-     "id": "000010e",
+     "id": "000010c",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -331,7 +322,7 @@
      },
      "elements": [
       {
-       "id": "000010d",
+       "id": "000010b",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -340,7 +331,7 @@
        },
        "elements": [
         {
-         "id": "0000107",
+         "id": "0000105",
          "elType": "widget",
          "widgetType": "image",
          "settings": {
@@ -357,7 +348,7 @@
          "elements": []
         },
         {
-         "id": "000010c",
+         "id": "000010a",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -366,7 +357,7 @@
          },
          "elements": [
           {
-           "id": "0000108",
+           "id": "0000106",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -378,7 +369,7 @@
            "elements": []
           },
           {
-           "id": "0000109",
+           "id": "0000107",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -390,7 +381,7 @@
            "elements": []
           },
           {
-           "id": "000010a",
+           "id": "0000108",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -401,7 +392,7 @@
            "elements": []
           },
           {
-           "id": "000010b",
+           "id": "0000109",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -421,7 +412,7 @@
      "isInner": false
     },
     {
-     "id": "0000146",
+     "id": "0000144",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -430,7 +421,7 @@
      },
      "elements": [
       {
-       "id": "0000145",
+       "id": "0000143",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -439,7 +430,7 @@
        },
        "elements": [
         {
-         "id": "0000117",
+         "id": "0000115",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -448,7 +439,7 @@
          },
          "elements": [
           {
-           "id": "000010f",
+           "id": "000010d",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -465,7 +456,7 @@
            "elements": []
           },
           {
-           "id": "0000116",
+           "id": "0000114",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -474,7 +465,7 @@
            },
            "elements": [
             {
-             "id": "0000112",
+             "id": "0000110",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -483,7 +474,7 @@
              },
              "elements": [
               {
-               "id": "0000110",
+               "id": "000010e",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -498,7 +489,7 @@
                "elements": []
               },
               {
-               "id": "0000111",
+               "id": "000010f",
                "elType": "widget",
                "widgetType": "heading",
                "settings": {
@@ -513,7 +504,7 @@
              "isInner": false
             },
             {
-             "id": "0000113",
+             "id": "0000111",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -525,7 +516,7 @@
              "elements": []
             },
             {
-             "id": "0000114",
+             "id": "0000112",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -536,7 +527,7 @@
              "elements": []
             },
             {
-             "id": "0000115",
+             "id": "0000113",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -553,7 +544,7 @@
          "isInner": false
         },
         {
-         "id": "0000120",
+         "id": "000011e",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -562,7 +553,7 @@
          },
          "elements": [
           {
-           "id": "0000118",
+           "id": "0000116",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -579,7 +570,7 @@
            "elements": []
           },
           {
-           "id": "000011f",
+           "id": "000011d",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -588,7 +579,7 @@
            },
            "elements": [
             {
-             "id": "000011b",
+             "id": "0000119",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -597,7 +588,7 @@
              },
              "elements": [
               {
-               "id": "0000119",
+               "id": "0000117",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -612,7 +603,7 @@
                "elements": []
               },
               {
-               "id": "000011a",
+               "id": "0000118",
                "elType": "widget",
                "widgetType": "heading",
                "settings": {
@@ -627,7 +618,7 @@
              "isInner": false
             },
             {
-             "id": "000011c",
+             "id": "000011a",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -639,7 +630,7 @@
              "elements": []
             },
             {
-             "id": "000011d",
+             "id": "000011b",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -650,7 +641,7 @@
              "elements": []
             },
             {
-             "id": "000011e",
+             "id": "000011c",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -667,7 +658,7 @@
          "isInner": false
         },
         {
-         "id": "0000129",
+         "id": "0000127",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -676,7 +667,7 @@
          },
          "elements": [
           {
-           "id": "0000121",
+           "id": "000011f",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -693,7 +684,7 @@
            "elements": []
           },
           {
-           "id": "0000128",
+           "id": "0000126",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -702,7 +693,7 @@
            },
            "elements": [
             {
-             "id": "0000124",
+             "id": "0000122",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -711,7 +702,7 @@
              },
              "elements": [
               {
-               "id": "0000122",
+               "id": "0000120",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -726,7 +717,7 @@
                "elements": []
               },
               {
-               "id": "0000123",
+               "id": "0000121",
                "elType": "widget",
                "widgetType": "heading",
                "settings": {
@@ -741,7 +732,7 @@
              "isInner": false
             },
             {
-             "id": "0000125",
+             "id": "0000123",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -753,7 +744,7 @@
              "elements": []
             },
             {
-             "id": "0000126",
+             "id": "0000124",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -764,7 +755,7 @@
              "elements": []
             },
             {
-             "id": "0000127",
+             "id": "0000125",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -781,7 +772,7 @@
          "isInner": false
         },
         {
-         "id": "0000132",
+         "id": "0000130",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -790,7 +781,7 @@
          },
          "elements": [
           {
-           "id": "000012a",
+           "id": "0000128",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -807,7 +798,7 @@
            "elements": []
           },
           {
-           "id": "0000131",
+           "id": "000012f",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -816,7 +807,7 @@
            },
            "elements": [
             {
-             "id": "000012d",
+             "id": "000012b",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -825,7 +816,7 @@
              },
              "elements": [
               {
-               "id": "000012b",
+               "id": "0000129",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -840,7 +831,7 @@
                "elements": []
               },
               {
-               "id": "000012c",
+               "id": "000012a",
                "elType": "widget",
                "widgetType": "heading",
                "settings": {
@@ -855,7 +846,7 @@
              "isInner": false
             },
             {
-             "id": "000012e",
+             "id": "000012c",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -867,7 +858,7 @@
              "elements": []
             },
             {
-             "id": "000012f",
+             "id": "000012d",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -878,7 +869,7 @@
              "elements": []
             },
             {
-             "id": "0000130",
+             "id": "000012e",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -895,7 +886,7 @@
          "isInner": false
         },
         {
-         "id": "000013b",
+         "id": "0000139",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -904,7 +895,7 @@
          },
          "elements": [
           {
-           "id": "0000133",
+           "id": "0000131",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -921,7 +912,7 @@
            "elements": []
           },
           {
-           "id": "000013a",
+           "id": "0000138",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -930,7 +921,7 @@
            },
            "elements": [
             {
-             "id": "0000136",
+             "id": "0000134",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -939,7 +930,7 @@
              },
              "elements": [
               {
-               "id": "0000134",
+               "id": "0000132",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -954,7 +945,7 @@
                "elements": []
               },
               {
-               "id": "0000135",
+               "id": "0000133",
                "elType": "widget",
                "widgetType": "heading",
                "settings": {
@@ -969,7 +960,7 @@
              "isInner": false
             },
             {
-             "id": "0000137",
+             "id": "0000135",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -981,7 +972,7 @@
              "elements": []
             },
             {
-             "id": "0000138",
+             "id": "0000136",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -992,7 +983,7 @@
              "elements": []
             },
             {
-             "id": "0000139",
+             "id": "0000137",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -1009,7 +1000,7 @@
          "isInner": false
         },
         {
-         "id": "0000144",
+         "id": "0000142",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -1018,7 +1009,7 @@
          },
          "elements": [
           {
-           "id": "000013c",
+           "id": "000013a",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -1035,7 +1026,7 @@
            "elements": []
           },
           {
-           "id": "0000143",
+           "id": "0000141",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -1044,7 +1035,7 @@
            },
            "elements": [
             {
-             "id": "000013f",
+             "id": "000013d",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -1053,7 +1044,7 @@
              },
              "elements": [
               {
-               "id": "000013d",
+               "id": "000013b",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -1068,7 +1059,7 @@
                "elements": []
               },
               {
-               "id": "000013e",
+               "id": "000013c",
                "elType": "widget",
                "widgetType": "heading",
                "settings": {
@@ -1083,7 +1074,7 @@
              "isInner": false
             },
             {
-             "id": "0000140",
+             "id": "000013e",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -1095,7 +1086,7 @@
              "elements": []
             },
             {
-             "id": "0000141",
+             "id": "000013f",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -1106,7 +1097,7 @@
              "elements": []
             },
             {
-             "id": "0000142",
+             "id": "0000140",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -1129,7 +1120,7 @@
      "isInner": false
     },
     {
-     "id": "000014e",
+     "id": "000014c",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -1138,7 +1129,7 @@
      },
      "elements": [
       {
-       "id": "000014d",
+       "id": "000014b",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -1147,7 +1138,7 @@
        },
        "elements": [
         {
-         "id": "000014c",
+         "id": "000014a",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -1156,7 +1147,7 @@
          },
          "elements": [
           {
-           "id": "0000147",
+           "id": "0000145",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -1168,7 +1159,7 @@
            "elements": []
           },
           {
-           "id": "0000148",
+           "id": "0000146",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -1179,7 +1170,7 @@
            "elements": []
           },
           {
-           "id": "000014b",
+           "id": "0000149",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -1188,7 +1179,7 @@
            },
            "elements": [
             {
-             "id": "0000149",
+             "id": "0000147",
              "elType": "widget",
              "widgetType": "button",
              "settings": {
@@ -1204,7 +1195,7 @@
              "elements": []
             },
             {
-             "id": "000014a",
+             "id": "0000148",
              "elType": "widget",
              "widgetType": "button",
              "settings": {
@@ -1232,7 +1223,7 @@
      "isInner": false
     },
     {
-     "id": "000015e",
+     "id": "000015b",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -1241,7 +1232,7 @@
      },
      "elements": [
       {
-       "id": "000015c",
+       "id": "0000159",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -1251,7 +1242,7 @@
        "elements": []
       },
       {
-       "id": "000015d",
+       "id": "000015a",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
