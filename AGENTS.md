@@ -8,7 +8,7 @@ editable in the Elementor editor.
 
 ```
 wordpress/
-  elementor/01-home.json      قالب صفحه خانه      (Elementor page template)
+  elementor/01-home.json      قالب صفحه خانه      (self-contained Elementor page template)
   elementor/02-services.json  قالب صفحه خدمات
   elementor/03-portfolio.json قالب صفحه نمونه‌کارها
   plugin/nadia-design/        design system: nadia.css + Vazirmatn + the images
@@ -18,10 +18,16 @@ wordpress/
   bin/entrypoint-web.sh       web container entrypoint → docker-entrypoint.sh apache2-bootstrap
   bin/apache2-bootstrap       bootstrap.sh → apache2-foreground (name must start with "apache2", see quirks #5)
   bin/import-pages.php        creates/updates the three pages from the JSON templates
+  bin/build-kit.py            patches the exported Elementor kit (page titles → slugs, see "The kit")
   Dockerfile.web              wordpress:php8.3-apache + the wp-cli binary (see quirks #2)
   README.md                   handover guide (نصب روی دامنه خودی)
-  nadia-elementor-site.zip    ready-to-install package (plugin + templates + README)
+  nadia-elementor-site.zip    legacy package (plugin + templates + README)
+  nadia-elementor-kit.zip     Elementor kit: global colors/fonts + three pages, no plugin needed
 ```
+
+The three templates are **self-contained**: the whole `nadia.css` is embedded in an HTML widget at
+the top of each page and images load from the public Lovable domain, so importing them needs no
+plugin (see "The kit").
 
 `nadia-elementor-pixel-template.json` in the repo root is the older hand-made export and is unused.
 
@@ -61,7 +67,8 @@ The preview serves the handover files so they can be downloaded from the browser
 | URL | File |
 | --- | --- |
 | `/nadia-downloads/` | صفحه دانلود با دکمه‌ها (RTL) |
-| `/nadia-package/nadia-elementor-site.zip` | بسته آماده نصب (افزونه + سه قالب + راهنما) |
+| `/nadia-package/nadia-elementor-kit.zip` | کیت المنتور (رنگ/فونت سراسری + سه صفحه، بدون افزونه) |
+| `/nadia-package/nadia-elementor-site.zip` | بسته قدیمی (افزونه + سه قالب + راهنما) |
 | `/nadia-package/templates/01-home.json` | قالب خانه |
 | `/nadia-package/templates/02-services.json` | قالب خدمات |
 | `/nadia-package/templates/03-portfolio.json` | قالب نمونه‌کارها |
@@ -70,6 +77,35 @@ These are bind mounts of `wordpress/downloads/`, `wordpress/nadia-elementor-site
 `wordpress/elementor/` — the files in the repo are the ones served, nothing is copied. The links in
 `downloads/index.html` rely on the HTML `download` attribute, so `.json` links download instead of
 opening inline; no `.htaccess` is needed.
+
+## The kit (`nadia-elementor-kit.zip`)
+
+An Elementor **kit export** (Elementor → Tools → Import/Export Kit) carrying the site's global colors
++ typography and the three pages. It is produced by Elementor itself, so the format is exactly what
+the importer expects.
+
+Rebuild it:
+
+```bash
+python3 wordpress/bin/build-elementor.py wordpress/elementor      # regenerate the templates
+docker compose -f docker-compose.base44.yml exec -T wordpress \
+  wp --path=/var/www/html --allow-root eval-file /source/bin/import-pages.php
+# (re)set the kit's global colors/typography, then:
+docker compose -f docker-compose.base44.yml exec -T wordpress \
+  wp --path=/var/www/html --allow-root elementor kit export /tmp/kit.zip --include=settings,content
+docker compose -f docker-compose.base44.yml cp wordpress:/tmp/kit.zip /tmp/kit.zip
+python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zip
+```
+
+- `build-kit.py` is **required**: Elementor derives each imported page's *slug from its title*, so the
+  Persian titles produced percent-encoded Persian slugs while the menu links to `/services/` and
+  `/portfolio/`. The script rewrites the manifest titles to `Home`/`Services`/`Portfolio` so the
+  imported pages get the slugs the menu expects.
+- Elementor's free version has no usable "Custom CSS" (the Site Settings tab is a Pro teaser), so the
+  CSS cannot travel in the kit's settings — it lives inside each page instead. That is why the
+  templates embed `nadia.css` and reference images from the public Lovable domain.
+- `wp elementor kit import` needs `--user=admin`; plain `--allow-root` fails with "You must run this
+  command as an admin user". The kit's `experiments` list is ignored on import, so it is safe to ship.
 
 ## Sandbox quirks (discovered the hard way)
 
@@ -97,6 +133,10 @@ opening inline; no `.htaccess` is needed.
    `entrypoint-web.sh` now calls `docker-entrypoint.sh apache2-bootstrap`; `apache2-bootstrap`
    runs `bootstrap.sh` and then `exec apache2-foreground`. Keep the final command `apache2*`-prefixed
    and executable (`chmod +x`) — it is exec'd via `PATH`, not run with `sh`.
+6. **Provisioning must stay idempotent, because `set -eu` turns any error into a crash loop.**
+   `wp plugin install elementor --activate` (and the theme equivalent) exits 1 once the plugin folder
+   already exists — which happens as soon as a newer Elementor is released. `bootstrap.sh` now guards
+   both with `wp plugin is-installed` / `wp theme is-installed` and only installs when missing.
 
 ## Elementor specifics that this project depends on
 

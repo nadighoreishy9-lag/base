@@ -45,6 +45,7 @@ services:
       # صفحه دانلود فایل‌ها (/nadia-downloads/) + خود فایل‌ها (/nadia-package/)
       - ./wordpress/downloads:/var/www/html/nadia-downloads:ro
       - ./wordpress/nadia-elementor-site.zip:/var/www/html/nadia-package/nadia-elementor-site.zip:ro
+      - ./wordpress/nadia-elementor-kit.zip:/var/www/html/nadia-package/nadia-elementor-kit.zip:ro
       - ./wordpress/elementor:/var/www/html/nadia-package/templates:ro
     # راه‌اندازی idempotent (نصب المنتور، زبان فارسی و ساخت سه صفحه) داخل همین سرویس اجرا
     # می‌شود؛ به‌همین دلیل سرویس one-shot جدا وجود ندارد و هیچ سرویسی «exited» نمی‌ماند.

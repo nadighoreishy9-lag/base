@@ -68,8 +68,18 @@ $WP option update blogdescription "سئو با نگاه طراحی؛ طراحی 
 $WP option update timezone_string "Asia/Tehran" >/dev/null
 
 echo "→ نصب افزونه المنتور و قالب Hello Elementor"
-$WP plugin install elementor --activate
-$WP theme install hello-elementor --activate
+# نصب فقط وقتی انجام می‌شود که واقعاً نصب نباشد. `wp plugin install` اگر پوشه از قبل موجود
+# باشد (مثلاً نسخه جدیدتری منتشر شده باشد) خطا می‌دهد و با set -eu کل راه‌اندازی متوقف می‌شود.
+if $WP plugin is-installed elementor; then
+  $WP plugin activate elementor
+else
+  $WP plugin install elementor --activate
+fi
+if $WP theme is-installed hello-elementor; then
+  $WP theme activate hello-elementor
+else
+  $WP theme install hello-elementor --activate
+fi
 $WP plugin activate nadia-design
 
 echo "→ زبان فارسی وردپرس"

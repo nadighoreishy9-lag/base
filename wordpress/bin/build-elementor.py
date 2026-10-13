@@ -11,6 +11,27 @@ from pathlib import Path
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else "wordpress/elementor")
 IMG = "/wp-content/plugins/nadia-design/assets/images/"
 
+# قالب‌ها «خودکفا» ساخته می‌شوند: CSS داخل خود صفحه تزریق می‌شود و تصاویر از دامنه عمومی
+# طراحی لاوایل بارگذاری می‌شوند؛ بنابراین برای استفاده از این قالب‌ها به هیچ افزونه‌ای نیاز نیست.
+CSS_FILE = Path(__file__).resolve().parent.parent / "plugin" / "nadia-design" / "assets" / "nadia.css"
+FONT_IMPORT = (
+    "@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:"
+    "wght@400;500;600;700;800;900&display=swap');"
+)
+LOVABLE_ASSETS = "https://nadiaghoeyshi.lovable.app/assets/"
+IMG_MAP = {
+    "nadia-portrait.jpg": LOVABLE_ASSETS + "nadia-portrait-faTNC5M7.jpg",
+    "project-content.jpg": LOVABLE_ASSETS + "project-content-CdsveXjx.jpg",
+    "project-corporate.jpg": LOVABLE_ASSETS + "project-corporate-DApRPBWH.jpg",
+    "project-ecommerce.jpg": LOVABLE_ASSETS + "project-ecommerce-Ozm8DC6S.jpg",
+    # این چهار تصویر روی دامنه لاوایل موجود نیستند؛ تا زمان جایگزینی با فایل‌های واقعی،
+    # نزدیک‌ترین تصویر موجود استفاده می‌شود.
+    "work-analytics.jpg": LOVABLE_ASSETS + "project-corporate-DApRPBWH.jpg",
+    "work-blog.jpg": LOVABLE_ASSETS + "project-content-CdsveXjx.jpg",
+    "work-responsive.jpg": LOVABLE_ASSETS + "project-corporate-DApRPBWH.jpg",
+    "work-shop.jpg": LOVABLE_ASSETS + "project-ecommerce-Ozm8DC6S.jpg",
+}
+
 _counter = 0
 
 
@@ -44,6 +65,25 @@ def widget(wtype, settings, cls=None):
         s["_css_classes"] = cls
         s["css_classes"] = cls
     return {"id": eid(), "elType": "widget", "widgetType": wtype, "settings": s, "elements": []}
+
+
+def style_widget():
+    """کل CSS را داخل خود قالب می‌گذارد تا صفحه بدون افزونه استایل داشته باشد."""
+    css = FONT_IMPORT + "\n" + CSS_FILE.read_text(encoding="utf-8")
+    return widget("html", {"html": "<style>\n" + css + "\n</style>"})
+
+
+def rewrite_image_urls(node):
+    """آدرس تصاویر افزونه را با آدرس عمومی طراحی جایگزین می‌کند."""
+    if isinstance(node, dict):
+        for key, value in node.items():
+            if key == "url" and isinstance(value, str) and value.startswith(IMG):
+                node[key] = IMG_MAP.get(value[len(IMG):], value)
+            else:
+                rewrite_image_urls(value)
+    elif isinstance(node, list):
+        for item in node:
+            rewrite_image_urls(item)
 
 
 def heading(title, tag="h2", cls=None, link=None):
@@ -231,13 +271,16 @@ def timeline_item(number, label, title, body):
 
 
 def page(title, sections):
-    return {
+    content = container("nd-page", [style_widget(), nav_for(title), *sections, footer()])
+    data = {
         "title": title,
         "type": "page",
         "version": "0.4",
         "page_settings": {"template": "elementor_canvas"},
-        "content": [container("nd-page", [nav_for(title), *sections, footer()])],
+        "content": [content],
     }
+    rewrite_image_urls(data)
+    return data
 
 
 ACTIVE_BY_TITLE = {"خانه": "", "خدمات": "خدمات", "نمونه‌کارها": "نمونه‌کار"}
