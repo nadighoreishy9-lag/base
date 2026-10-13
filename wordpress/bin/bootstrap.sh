@@ -70,13 +70,19 @@ $WP option update timezone_string "Asia/Tehran" >/dev/null
 echo "→ نصب افزونه المنتور و قالب Hello Elementor"
 # نصب فقط وقتی انجام می‌شود که واقعاً نصب نباشد. `wp plugin install` اگر پوشه از قبل موجود
 # باشد (مثلاً نسخه جدیدتری منتشر شده باشد) خطا می‌دهد و با set -eu کل راه‌اندازی متوقف می‌شود.
+# اگر پوشه موجود ولی در فهرست افزونه‌ها ثبت نشده باشد (نصب/ارتقای نیمه‌کاره) با --force
+# بازنویسی می‌شود تا خطای «پوشه از قبل موجود است» باعث حلقهٔ ری‌استارت نشود.
 if $WP plugin is-installed elementor; then
   $WP plugin activate elementor
+elif [ -d /var/www/html/wp-content/plugins/elementor ]; then
+  $WP plugin install elementor --force --activate
 else
   $WP plugin install elementor --activate
 fi
 if $WP theme is-installed hello-elementor; then
   $WP theme activate hello-elementor
+elif [ -d /var/www/html/wp-content/themes/hello-elementor ]; then
+  $WP theme install hello-elementor --force --activate
 else
   $WP theme install hello-elementor --activate
 fi

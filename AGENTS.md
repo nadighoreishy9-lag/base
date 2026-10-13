@@ -136,7 +136,9 @@ python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zi
 6. **Provisioning must stay idempotent, because `set -eu` turns any error into a crash loop.**
    `wp plugin install elementor --activate` (and the theme equivalent) exits 1 once the plugin folder
    already exists — which happens as soon as a newer Elementor is released. `bootstrap.sh` now guards
-   both with `wp plugin is-installed` / `wp theme is-installed` and only installs when missing.
+   both with `wp plugin is-installed` / `wp theme is-installed` and only installs when missing. If the
+   folder exists but is **not** registered (a half-finished install/upgrade), the guard falls back to
+   `install --force --activate` so the "target folder already exists" error can never crash the boot.
 
 ## Elementor specifics that this project depends on
 
