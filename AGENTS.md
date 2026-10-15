@@ -74,11 +74,13 @@ The preview serves the handover files so they can be downloaded from the browser
 | `/nadia-package/templates/01-home.json` | قالب خانه |
 | `/nadia-package/templates/02-services.json` | قالب خدمات |
 | `/nadia-package/templates/03-portfolio.json` | قالب نمونه‌کارها |
+| `/nadia-package/assets/nadia.css` | فایل استایل (برای «CSS افزودنی»، بدون افزونه) |
+| `/nadia-package/assets/images/…` | تصاویر پروژه |
 
-These are bind mounts of `wordpress/downloads/`, `wordpress/nadia-elementor-site.zip` and
-`wordpress/elementor/` — the files in the repo are the ones served, nothing is copied. The links in
-`downloads/index.html` rely on the HTML `download` attribute, so `.json` links download instead of
-opening inline; no `.htaccess` is needed.
+These are bind mounts of `wordpress/downloads/`, `wordpress/nadia-elementor-site.zip`,
+`wordpress/elementor/` and `wordpress/plugin/nadia-design/assets/` — the files in the repo are the
+ones served, nothing is copied. The links in `downloads/index.html` rely on the HTML `download`
+attribute, so `.json` links download instead of opening inline; no `.htaccess` is needed.
 
 ## The kit (`nadia-elementor-kit.zip`)
 
@@ -136,6 +138,12 @@ python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zi
    `entrypoint-web.sh` now calls `docker-entrypoint.sh apache2-bootstrap`; `apache2-bootstrap`
    runs `bootstrap.sh` and then `exec apache2-foreground`. Keep the final command `apache2*`-prefixed
    and executable (`chmod +x`) — it is exec'd via `PATH`, not run with `sh`.
+7. **Mount the assets *directory*, not a single file.** A single-file bind mount
+   (`…/assets/nadia.css:/…/nadia-package/nadia.css`) silently disappears — the running container can
+   predate the compose line, and replacing the host file drops the mount — leaving the download link
+   a 404. `docker-compose.base44.yml` mounts `plugin/nadia-design/assets` as a directory instead,
+   which also serves the images at `/nadia-package/assets/images/…`.
+
 6. **Provisioning must stay idempotent, because `set -eu` turns any error into a crash loop.**
    `wp plugin install elementor --activate` (and the theme equivalent) exits 1 once the plugin folder
    already exists — which happens as soon as a newer Elementor is released. `bootstrap.sh` now guards
