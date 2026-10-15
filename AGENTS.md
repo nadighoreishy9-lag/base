@@ -25,9 +25,11 @@ wordpress/
   nadia-elementor-kit.zip     Elementor kit: global colors/fonts + three pages, no plugin needed
 ```
 
-The three templates are **self-contained**: the whole `nadia.css` is embedded in an HTML widget at
-the top of each page and images load from the public Lovable domain, so importing them needs no
-plugin (see "The kit").
+The three templates reference **no plugin assets**: images load from the public Lovable domain and
+all styling comes from the separate `nadia.css`. That file carries the Vazirmatn `@import` too, so
+pasting it into «ظاهر → سفارشی‌سازی → CSS افزودنی» styles the site with **no plugin at all**; the
+`nadia-design` plugin is only an optional convenience that enqueues the same file. CSS is never
+embedded in page content (see "The kit").
 
 `nadia-elementor-pixel-template.json` in the repo root is the older hand-made export and is unused.
 
@@ -102,8 +104,9 @@ python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zi
   `/portfolio/`. The script rewrites the manifest titles to `Home`/`Services`/`Portfolio` so the
   imported pages get the slugs the menu expects.
 - Elementor's free version has no usable "Custom CSS" (the Site Settings tab is a Pro teaser), so the
-  CSS cannot travel in the kit's settings — it lives inside each page instead. That is why the
-  templates embed `nadia.css` and reference images from the public Lovable domain.
+  CSS cannot travel in the kit's settings. It ships as a standalone `nadia.css` instead (loaded by
+  the optional `nadia-design` plugin, or pasted into «ظاهر → سفارشی‌سازی → CSS افزودنی»), and the
+  templates reference images from the public Lovable domain.
 - `wp elementor kit import` needs `--user=admin`; plain `--allow-root` fails with "You must run this
   command as an admin user". The kit's `experiments` list is ignored on import, so it is safe to ship.
 
@@ -152,8 +155,10 @@ python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zi
   tag), so icon boxes are sized via `.elementor-icon svg`.
 - **Page canvas.** Templates use `page_settings.template = elementor_canvas`; the header/footer are
   inside each page (no Elementor Pro theme builder needed).
-- **Images** are referenced as `/wp-content/plugins/nadia-design/assets/images/…` so an imported
-  template renders correctly on any domain without extra setup.
+- **Images** are referenced by absolute URLs on the public Lovable domain
+  (`https://nadiaghoeyshi.lovable.app/assets/…`) so an imported template renders on any domain
+  without extra setup and without the plugin. `bin/build-elementor.py` maps the local
+  `plugin/nadia-design/assets/images/` names to those URLs via `IMG_MAP`.
 - The generated CSS lives in `wp-content/uploads/elementor/css/post-<id>.css`;
   `import-pages.php` calls Elementor's file manager `clear_cache()` after each import.
 

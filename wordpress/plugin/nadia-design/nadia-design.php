@@ -15,17 +15,12 @@ define('NADIA_DESIGN_VERSION', '1.0.0');
 
 function nadia_design_enqueue(): void
 {
-    wp_enqueue_style(
-        'nadia-design-fonts',
-        'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap',
-        [],
-        null
-    );
-
+    // فونت وزیرمتن داخل خود nadia.css با @import بارگذاری می‌شود، پس هر دو روش
+    // (این افزونه و «CSS افزودنی» بدون افزونه) یک استایل و یک فونت یکسان می‌دهند.
     wp_enqueue_style(
         'nadia-design',
         plugin_dir_url(__FILE__) . 'assets/nadia.css',
-        ['nadia-design-fonts'],
+        [],
         NADIA_DESIGN_VERSION
     );
 }
