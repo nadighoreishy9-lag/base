@@ -3,29 +3,29 @@
 ## What this repo is
 
 A **WordPress site** for نادیا قریشی (SEO specialist / web designer), converted from the Lovable
-design source. The site's three pages are built with **native Elementor widgets** so everything is
-editable in the Elementor editor.
+design source. The site is a **single page** (hero + services + portfolio + résumé band + contact),
+like the Lovable original, built with **native Elementor widgets** so everything is editable in the
+Elementor editor. The header menu links to in-page anchors (`#top` / `#services` / `#portfolio` /
+`#contact`) and there is deliberately no résumé menu item.
 
 ```
 wordpress/
   elementor/01-home.json      قالب صفحه خانه      (self-contained Elementor page template)
-  elementor/02-services.json  قالب صفحه خدمات
-  elementor/03-portfolio.json قالب صفحه نمونه‌کارها
   plugin/nadia-design/        design system: nadia.css + Vazirmatn + the images
   downloads/index.html        صفحه دانلود فایل‌ها (/nadia-downloads/ در پیش‌نمایش)
-  bin/build-elementor.py      generates the three JSON templates (source of truth for content)
-  bin/bootstrap.sh            provisions WordPress + Elementor and builds the three pages
+  bin/build-elementor.py      generates the single JSON template (source of truth for content)
+  bin/bootstrap.sh            provisions WordPress + Elementor and builds the page
   bin/entrypoint-web.sh       web container entrypoint → docker-entrypoint.sh apache2-bootstrap
   bin/apache2-bootstrap       bootstrap.sh → apache2-foreground (name must start with "apache2", see quirks #5)
-  bin/import-pages.php        creates/updates the three pages from the JSON templates
-  bin/build-kit.py            patches the exported Elementor kit (page titles → slugs, see "The kit")
+  bin/import-pages.php        creates/updates the page and trashes any legacy extra pages
+  bin/build-kit.py            patches the exported Elementor kit (page title → slug, see "The kit")
   Dockerfile.web              wordpress:php8.3-apache + the wp-cli binary (see quirks #2)
   README.md                   handover guide (نصب روی دامنه خودی)
-  nadia-elementor-site.zip    legacy package (plugin + templates + README)
-  nadia-elementor-kit.zip     Elementor kit: global colors/fonts + three pages, no plugin needed
+  nadia-elementor-site.zip    legacy package (plugin + template + README)
+  nadia-elementor-kit.zip     Elementor kit: global colors/fonts + the page, no plugin needed
 ```
 
-The three templates reference **no plugin assets**: images load from the public Lovable domain and
+The template references **no plugin assets**: images load from the public Lovable domain and
 all styling comes from the separate `nadia.css`. That file carries the Vazirmatn `@import` too, so
 pasting it into «ظاهر → سفارشی‌سازی → CSS افزودنی» styles the site with **no plugin at all**; the
 `nadia-design` plugin is only an optional convenience that enqueues the same file. CSS is never
@@ -47,7 +47,8 @@ docker compose -f docker-compose.base44.yml logs -f wordpress  # includes provis
   Provisioning runs **inside this service** on every start (`bin/entrypoint-web.sh` →
   `bin/bootstrap.sh`): installs WP, installs/activates Elementor + Hello Elementor, activates the
   style plugin, installs the Persian language pack, sets `/%postname%/` permalinks and
-  (re)builds the three pages. It is idempotent. Re-run after changing a template:
+  (re)builds the single page (trashing any legacy `services`/`portfolio` pages). It is idempotent.
+  Re-run after changing the template:
 
 ```bash
 docker compose -f docker-compose.base44.yml up -d --force-recreate wordpress
@@ -69,11 +70,9 @@ The preview serves the handover files so they can be downloaded from the browser
 | URL | File |
 | --- | --- |
 | `/nadia-downloads/` | صفحه دانلود با دکمه‌ها (RTL) |
-| `/nadia-package/nadia-elementor-kit.zip` | کیت المنتور (رنگ/فونت سراسری + سه صفحه، بدون افزونه) |
-| `/nadia-package/nadia-elementor-site.zip` | بسته قدیمی (افزونه + سه قالب + راهنما) |
-| `/nadia-package/templates/01-home.json` | قالب خانه |
-| `/nadia-package/templates/02-services.json` | قالب خدمات |
-| `/nadia-package/templates/03-portfolio.json` | قالب نمونه‌کارها |
+| `/nadia-package/nadia-elementor-kit.zip` | کیت المنتور (رنگ/فونت سراسری + صفحه تک‌صفحه‌ای، بدون افزونه) |
+| `/nadia-package/nadia-elementor-site.zip` | بسته قدیمی (افزونه + قالب + راهنما) |
+| `/nadia-package/templates/01-home.json` | قالب خانه (کل سایت) |
 | `/nadia-package/assets/nadia.css` | فایل استایل (برای «CSS افزودنی»، بدون افزونه) |
 | `/nadia-package/assets/images/…` | تصاویر پروژه |
 
@@ -85,7 +84,7 @@ attribute, so `.json` links download instead of opening inline; no `.htaccess` i
 ## The kit (`nadia-elementor-kit.zip`)
 
 An Elementor **kit export** (Elementor → Tools → Import/Export Kit) carrying the site's global colors
-+ typography and the three pages. It is produced by Elementor itself, so the format is exactly what
++ typography and the single page. It is produced by Elementor itself, so the format is exactly what
 the importer expects.
 
 Rebuild it:
@@ -101,10 +100,9 @@ docker compose -f docker-compose.base44.yml cp wordpress:/tmp/kit.zip /tmp/kit.z
 python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zip
 ```
 
-- `build-kit.py` is **required**: Elementor derives each imported page's *slug from its title*, so the
-  Persian titles produced percent-encoded Persian slugs while the menu links to `/services/` and
-  `/portfolio/`. The script rewrites the manifest titles to `Home`/`Services`/`Portfolio` so the
-  imported pages get the slugs the menu expects.
+- `build-kit.py` is **required**: Elementor derives an imported page's *slug from its title*, so the
+  Persian title produced a percent-encoded Persian slug. The script rewrites the manifest title to
+  `Home` so the imported page gets the clean `home` slug.
 - Elementor's free version has no usable "Custom CSS" (the Site Settings tab is a Pro teaser), so the
   CSS cannot travel in the kit's settings. It ships as a standalone `nadia.css` instead (loaded by
   the optional `nadia-design` plugin, or pasted into «ظاهر → سفارشی‌سازی → CSS افزودنی»), and the
@@ -174,16 +172,18 @@ python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zi
 
 ```bash
 U="https://3000-$BASE44_PUBLIC_HOST_SUFFIX"
-curl -s -o /dev/null -w '%{http_code}\n' "$U/" "$U/services/" "$U/portfolio/"     # 200 200 200
+curl -s -o /dev/null -w '%{http_code}\n' "$U/"                        # 200
+curl -s -o /dev/null -w '%{http_code}\n' "$U/services/" "$U/portfolio/"  # 404 (single-page site)
 curl -s -o /dev/null -w '%{http_code}\n' "$U/nadia-downloads/" \
      "$U/nadia-package/nadia-elementor-site.zip" "$U/nadia-package/templates/01-home.json"
 curl -s "$U/" | grep -o 'elementor/css/post-[0-9]*\.css'                          # generated CSS linked
-curl -s "$U/" | grep -o 'id="\(services\|portfolio\|resume\|contact\)"'            # anchors
+curl -s "$U/" | grep -o 'id="\(top\|services\|portfolio\|resume\|contact\)"'       # anchors
+curl -s "$U/" | grep -o 'href="#[a-z]*"'                                          # menu links to anchors
 ```
 
-Expected structure: home = hero + 6 service cards + 3 projects + dark résumé band (3 steps) +
-contact box; services = divider + 4 SEO cards + 2 design cards + 4 process steps + CTA;
-portfolio = 5 filter chips + featured project + 6 work cards + CTA.
+Expected structure: the single home page = hero + 6 service cards + 3 projects + dark résumé band
+(3 steps) + contact box, with the header menu linking to the `#top`/`#services`/`#portfolio`/
+`#contact` anchors.
 
 Elementor's real import path (Templates → Import) can be exercised without a browser:
 

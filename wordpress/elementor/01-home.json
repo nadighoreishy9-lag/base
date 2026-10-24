@@ -50,7 +50,7 @@
             "title": "ن",
             "header_size": "div",
             "link": {
-             "url": "/",
+             "url": "#top",
              "is_external": "",
              "nofollow": ""
             },
@@ -67,7 +67,7 @@
             "title": "نادیا قریشی",
             "header_size": "div",
             "link": {
-             "url": "/",
+             "url": "#top",
              "is_external": "",
              "nofollow": ""
             },
@@ -93,9 +93,9 @@
            "elType": "widget",
            "widgetType": "button",
            "settings": {
-            "text": "خدمات",
+            "text": "خانه",
             "link": {
-             "url": "/services/",
+             "url": "#top",
              "is_external": "",
              "nofollow": ""
             },
@@ -109,9 +109,9 @@
            "elType": "widget",
            "widgetType": "button",
            "settings": {
-            "text": "نمونه‌کار",
+            "text": "خدمات",
             "link": {
-             "url": "/portfolio/",
+             "url": "#services",
              "is_external": "",
              "nofollow": ""
             },
@@ -125,9 +125,9 @@
            "elType": "widget",
            "widgetType": "button",
            "settings": {
-            "text": "رزومه",
+            "text": "نمونه‌کار",
             "link": {
-             "url": "/#resume",
+             "url": "#portfolio",
              "is_external": "",
              "nofollow": ""
             },
@@ -143,7 +143,7 @@
            "settings": {
             "text": "تماس",
             "link": {
-             "url": "/#contact",
+             "url": "#contact",
              "is_external": "",
              "nofollow": ""
             },
@@ -162,7 +162,7 @@
          "settings": {
           "text": "شروع گفتگو",
           "link": {
-           "url": "/#contact",
+           "url": "#contact",
            "is_external": "",
            "nofollow": ""
           },
@@ -183,7 +183,8 @@
      "settings": {
       "content_width": "full",
       "css_classes": "nd-hero",
-      "_css_classes": "nd-hero"
+      "_css_classes": "nd-hero",
+      "_element_id": "top"
      },
      "elements": [
       {
@@ -270,7 +271,7 @@
            "settings": {
             "text": "دیدن نمونه‌کارها",
             "link": {
-             "url": "/portfolio/",
+             "url": "#portfolio",
              "is_external": "",
              "nofollow": ""
             },
@@ -286,7 +287,7 @@
            "settings": {
             "text": "ارتباط با من",
             "link": {
-             "url": "/#contact",
+             "url": "#contact",
              "is_external": "",
              "nofollow": ""
             },
@@ -1324,7 +1325,7 @@
            "settings": {
             "text": "درخواست رزومه کامل",
             "link": {
-             "url": "/#contact",
+             "url": "#contact",
              "is_external": "",
              "nofollow": ""
             },

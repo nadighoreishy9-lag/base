@@ -245,6 +245,13 @@ body .nd-page .nd-nav {
   border-radius: 1.5rem;
 }
 
+/* کانتینرهای المنتور به‌صورت پیش‌فرض عرض ۱۰۰٪ دارند؛ در نوار افقی هدر این عرض باعث
+   می‌شود «برند» تمام فضا را بگیرد و منو و دکمه له شوند. عرض هر سه بخش هدر خودکار می‌شود. */
+body .nd-page .nd-nav > * {
+  width: auto;
+  flex: 0 0 auto;
+}
+
 body .nd-page .nd-brand {
   display: flex;
   flex-direction: row;
@@ -767,12 +774,16 @@ body .nd-page .nd-contact-box {
   text-align: center;
 }
 
+/* هالهٔ بنفش پشت جعبه تماس: با left:50% + translateX(-50%) دقیقاً وسط جعبه می‌نشیند.
+   پیش‌تر با inset-inline تعریف شده بود و در چیدمان راست‌به‌چپ به سمت چپ جابه‌جا می‌شد. */
 body .nd-page .nd-contact-box::before {
   content: "";
   position: absolute;
   top: -6rem;
-  inset-inline: 25%;
+  left: 50%;
+  width: min(38rem, 72%);
   height: 12rem;
+  transform: translateX(-50%);
   border-radius: 999px;
   background-color: var(--nd-secondary);
   filter: blur(48px);
