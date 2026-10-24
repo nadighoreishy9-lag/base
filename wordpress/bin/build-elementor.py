@@ -128,7 +128,6 @@ def nav(active=""):
                     container(
                         "nd-menu",
                         [
-                            link("خانه", "/"),
                             link("خدمات", "/services/"),
                             link("نمونه‌کار", "/portfolio/"),
                             link("رزومه", "/#resume"),
@@ -363,7 +362,6 @@ def home_page():
                     heading("خدمات و تخصص‌ها", "p", "nd-eyebrow"),
                     heading("از پیدا شدن در جست‌وجو تا تجربه‌ای که در ذهن می‌ماند", "h2", "nd-h2"),
                     text("<p>هر پروژه را بر اساس نیاز واقعی آن بررسی می‌کنم؛ بدون نسخه آماده و وعده‌های غیرواقعی.</p>", "nd-muted"),
-                    button("توضیح کامل هر خدمت", "/services/", "nd-link-btn"),
                 ],
             ),
             container(
@@ -393,10 +391,6 @@ def home_page():
             container(
                 "nd-grid nd-grid-3",
                 [project_card(IMG + img, alt, kind, title, body) for img, alt, kind, title, body in home_projects],
-            ),
-            container(
-                "nd-cta-row",
-                [button("مشاهده صفحه کامل نمونه‌کارها", "/portfolio/", "nd-btn nd-btn-primary")],
             ),
         ],
         _element_id="portfolio",
@@ -434,7 +428,7 @@ def home_page():
                             icon("fas fa-envelope", "nd-contact-icon"),
                             heading("برای یک گفت‌وگوی حرفه‌ای آماده‌ام", "h2", "nd-contact-title"),
                             text(
-                                "<p>اگر برای همکاری، فرصت شغلی یا پروژه سئو و طراحی وب به دنبال همکاری دقیق و مسئولیت‌پذیر هستید، خوشحال می‌شوم بیشتر صحبت کنیم.</p>",
+                                "<p>اگر برای همکاری، فرصت شغلی یا پروژه سئو و طراحی وب به دنبال همراهی دقیق و مسئولیت‌پذیر هستید، خوشحال می‌شوم بیشتر صحبت کنیم.</p>",
                                 "nd-contact-text",
                             ),
                             container(

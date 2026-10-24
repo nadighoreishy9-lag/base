@@ -241,8 +241,8 @@ body .nd-page .nd-nav {
   gap: 1rem;
   max-width: 72rem;
   margin-inline: auto;
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
 }
 
 body .nd-page .nd-brand {
@@ -366,9 +366,15 @@ body .nd-page .nd-hello .elementor-heading-title {
 body .nd-page .nd-hero-title .elementor-heading-title {
   margin-top: 0.75rem;
   max-width: 48rem;
-  font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+  font-size: 3rem;
   font-weight: 900;
   line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+  body .nd-page .nd-hero-title .elementor-heading-title {
+    font-size: 4.5rem;
+  }
 }
 
 body .nd-page .nd-lead {
@@ -522,7 +528,7 @@ body .nd-page .nd-grid-2 {
 body .nd-page .nd-card {
   display: block;
   padding: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -579,7 +585,7 @@ body .nd-page .nd-project {
   display: block;
   overflow: hidden;
   border: 1px solid var(--nd-border);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   background-color: var(--nd-card);
   box-shadow: var(--nd-shadow-soft);
 }
@@ -756,8 +762,8 @@ body .nd-page .nd-contact-box {
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 4rem 2rem;
-  border-radius: 1.5rem;
+  padding: 4rem 3rem;
+  border-radius: 1.75rem;
   text-align: center;
 }
 

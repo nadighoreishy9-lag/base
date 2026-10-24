@@ -7,7 +7,7 @@
  },
  "content": [
   {
-   "id": "00000fa",
+   "id": "00000f5",
    "elType": "container",
    "settings": {
     "content_width": "full",
@@ -16,7 +16,7 @@
    },
    "elements": [
     {
-     "id": "00000f6",
+     "id": "00000f1",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -25,7 +25,7 @@
      },
      "elements": [
       {
-       "id": "00000f5",
+       "id": "00000f0",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -34,7 +34,7 @@
        },
        "elements": [
         {
-         "id": "00000ed",
+         "id": "00000e9",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -43,7 +43,7 @@
          },
          "elements": [
           {
-           "id": "00000eb",
+           "id": "00000e7",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -60,7 +60,7 @@
            "elements": []
           },
           {
-           "id": "00000ec",
+           "id": "00000e8",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -80,7 +80,7 @@
          "isInner": false
         },
         {
-         "id": "00000f3",
+         "id": "00000ee",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -89,23 +89,7 @@
          },
          "elements": [
           {
-           "id": "00000ee",
-           "elType": "widget",
-           "widgetType": "button",
-           "settings": {
-            "text": "خانه",
-            "link": {
-             "url": "/",
-             "is_external": "",
-             "nofollow": ""
-            },
-            "_css_classes": "nd-menu-link",
-            "css_classes": "nd-menu-link"
-           },
-           "elements": []
-          },
-          {
-           "id": "00000ef",
+           "id": "00000ea",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -121,7 +105,7 @@
            "elements": []
           },
           {
-           "id": "00000f0",
+           "id": "00000eb",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -137,7 +121,7 @@
            "elements": []
           },
           {
-           "id": "00000f1",
+           "id": "00000ec",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -153,7 +137,7 @@
            "elements": []
           },
           {
-           "id": "00000f2",
+           "id": "00000ed",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -172,7 +156,7 @@
          "isInner": false
         },
         {
-         "id": "00000f4",
+         "id": "00000ef",
          "elType": "widget",
          "widgetType": "button",
          "settings": {
@@ -194,7 +178,7 @@
      "isInner": false
     },
     {
-     "id": "0000091",
+     "id": "000008d",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -203,7 +187,7 @@
      },
      "elements": [
       {
-       "id": "000008e",
+       "id": "000008a",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -215,7 +199,7 @@
        "elements": []
       },
       {
-       "id": "000008f",
+       "id": "000008b",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -227,7 +211,7 @@
        "elements": []
       },
       {
-       "id": "0000090",
+       "id": "000008c",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -241,7 +225,7 @@
      "isInner": false
     },
     {
-     "id": "00000b7",
+     "id": "00000b3",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -250,7 +234,7 @@
      },
      "elements": [
       {
-       "id": "0000095",
+       "id": "0000091",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -259,7 +243,7 @@
        },
        "elements": [
         {
-         "id": "0000092",
+         "id": "000008e",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -270,7 +254,7 @@
          "isInner": false
         },
         {
-         "id": "0000093",
+         "id": "000008f",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -282,7 +266,7 @@
          "elements": []
         },
         {
-         "id": "0000094",
+         "id": "0000090",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -296,7 +280,7 @@
        "isInner": false
       },
       {
-       "id": "00000b6",
+       "id": "00000b2",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -305,7 +289,7 @@
        },
        "elements": [
         {
-         "id": "000009d",
+         "id": "0000099",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -314,7 +298,7 @@
          },
          "elements": [
           {
-           "id": "0000098",
+           "id": "0000094",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -323,7 +307,7 @@
            },
            "elements": [
             {
-             "id": "0000096",
+             "id": "0000092",
              "elType": "widget",
              "widgetType": "icon",
              "settings": {
@@ -338,7 +322,7 @@
              "elements": []
             },
             {
-             "id": "0000097",
+             "id": "0000093",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -353,7 +337,7 @@
            "isInner": false
           },
           {
-           "id": "0000099",
+           "id": "0000095",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -365,7 +349,7 @@
            "elements": []
           },
           {
-           "id": "000009a",
+           "id": "0000096",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -376,7 +360,7 @@
            "elements": []
           },
           {
-           "id": "000009b",
+           "id": "0000097",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -387,7 +371,7 @@
            "elements": []
           },
           {
-           "id": "000009c",
+           "id": "0000098",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -401,7 +385,7 @@
          "isInner": false
         },
         {
-         "id": "00000a5",
+         "id": "00000a1",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -410,7 +394,7 @@
          },
          "elements": [
           {
-           "id": "00000a0",
+           "id": "000009c",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -419,7 +403,7 @@
            },
            "elements": [
             {
-             "id": "000009e",
+             "id": "000009a",
              "elType": "widget",
              "widgetType": "icon",
              "settings": {
@@ -434,7 +418,7 @@
              "elements": []
             },
             {
-             "id": "000009f",
+             "id": "000009b",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -449,7 +433,7 @@
            "isInner": false
           },
           {
-           "id": "00000a1",
+           "id": "000009d",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -461,7 +445,7 @@
            "elements": []
           },
           {
-           "id": "00000a2",
+           "id": "000009e",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -472,7 +456,7 @@
            "elements": []
           },
           {
-           "id": "00000a3",
+           "id": "000009f",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -483,7 +467,7 @@
            "elements": []
           },
           {
-           "id": "00000a4",
+           "id": "00000a0",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -497,7 +481,7 @@
          "isInner": false
         },
         {
-         "id": "00000ad",
+         "id": "00000a9",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -506,7 +490,7 @@
          },
          "elements": [
           {
-           "id": "00000a8",
+           "id": "00000a4",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -515,7 +499,7 @@
            },
            "elements": [
             {
-             "id": "00000a6",
+             "id": "00000a2",
              "elType": "widget",
              "widgetType": "icon",
              "settings": {
@@ -530,7 +514,7 @@
              "elements": []
             },
             {
-             "id": "00000a7",
+             "id": "00000a3",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -545,7 +529,7 @@
            "isInner": false
           },
           {
-           "id": "00000a9",
+           "id": "00000a5",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -557,7 +541,7 @@
            "elements": []
           },
           {
-           "id": "00000aa",
+           "id": "00000a6",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -568,7 +552,7 @@
            "elements": []
           },
           {
-           "id": "00000ab",
+           "id": "00000a7",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -579,7 +563,7 @@
            "elements": []
           },
           {
-           "id": "00000ac",
+           "id": "00000a8",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -593,7 +577,7 @@
          "isInner": false
         },
         {
-         "id": "00000b5",
+         "id": "00000b1",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -602,7 +586,7 @@
          },
          "elements": [
           {
-           "id": "00000b0",
+           "id": "00000ac",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -611,7 +595,7 @@
            },
            "elements": [
             {
-             "id": "00000ae",
+             "id": "00000aa",
              "elType": "widget",
              "widgetType": "icon",
              "settings": {
@@ -626,7 +610,7 @@
              "elements": []
             },
             {
-             "id": "00000af",
+             "id": "00000ab",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -641,7 +625,7 @@
            "isInner": false
           },
           {
-           "id": "00000b1",
+           "id": "00000ad",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -653,7 +637,7 @@
            "elements": []
           },
           {
-           "id": "00000b2",
+           "id": "00000ae",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -664,7 +648,7 @@
            "elements": []
           },
           {
-           "id": "00000b3",
+           "id": "00000af",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -675,7 +659,7 @@
            "elements": []
           },
           {
-           "id": "00000b4",
+           "id": "00000b0",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -695,7 +679,7 @@
      "isInner": false
     },
     {
-     "id": "00000cb",
+     "id": "00000c7",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -704,7 +688,7 @@
      },
      "elements": [
       {
-       "id": "00000bb",
+       "id": "00000b7",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -713,7 +697,7 @@
        },
        "elements": [
         {
-         "id": "00000b8",
+         "id": "00000b4",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -724,7 +708,7 @@
          "isInner": false
         },
         {
-         "id": "00000b9",
+         "id": "00000b5",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -736,7 +720,7 @@
          "elements": []
         },
         {
-         "id": "00000ba",
+         "id": "00000b6",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -750,7 +734,7 @@
        "isInner": false
       },
       {
-       "id": "00000ca",
+       "id": "00000c6",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -759,7 +743,7 @@
        },
        "elements": [
         {
-         "id": "00000c2",
+         "id": "00000be",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -768,7 +752,7 @@
          },
          "elements": [
           {
-           "id": "00000bd",
+           "id": "00000b9",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -777,7 +761,7 @@
            },
            "elements": [
             {
-             "id": "00000bc",
+             "id": "00000b8",
              "elType": "widget",
              "widgetType": "icon",
              "settings": {
@@ -795,7 +779,7 @@
            "isInner": false
           },
           {
-           "id": "00000be",
+           "id": "00000ba",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -807,7 +791,7 @@
            "elements": []
           },
           {
-           "id": "00000bf",
+           "id": "00000bb",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -818,7 +802,7 @@
            "elements": []
           },
           {
-           "id": "00000c0",
+           "id": "00000bc",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -829,7 +813,7 @@
            "elements": []
           },
           {
-           "id": "00000c1",
+           "id": "00000bd",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -843,7 +827,7 @@
          "isInner": false
         },
         {
-         "id": "00000c9",
+         "id": "00000c5",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -852,7 +836,7 @@
          },
          "elements": [
           {
-           "id": "00000c4",
+           "id": "00000c0",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -861,7 +845,7 @@
            },
            "elements": [
             {
-             "id": "00000c3",
+             "id": "00000bf",
              "elType": "widget",
              "widgetType": "icon",
              "settings": {
@@ -879,7 +863,7 @@
            "isInner": false
           },
           {
-           "id": "00000c5",
+           "id": "00000c1",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -891,7 +875,7 @@
            "elements": []
           },
           {
-           "id": "00000c6",
+           "id": "00000c2",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -902,7 +886,7 @@
            "elements": []
           },
           {
-           "id": "00000c7",
+           "id": "00000c3",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -913,7 +897,7 @@
            "elements": []
           },
           {
-           "id": "00000c8",
+           "id": "00000c4",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -933,7 +917,7 @@
      "isInner": false
     },
     {
-     "id": "00000e2",
+     "id": "00000de",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -942,7 +926,7 @@
      },
      "elements": [
       {
-       "id": "00000e1",
+       "id": "00000dd",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -951,7 +935,7 @@
        },
        "elements": [
         {
-         "id": "00000cf",
+         "id": "00000cb",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -960,7 +944,7 @@
          },
          "elements": [
           {
-           "id": "00000cc",
+           "id": "00000c8",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -972,7 +956,7 @@
            "elements": []
           },
           {
-           "id": "00000cd",
+           "id": "00000c9",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -984,7 +968,7 @@
            "elements": []
           },
           {
-           "id": "00000ce",
+           "id": "00000ca",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -998,7 +982,7 @@
          "isInner": false
         },
         {
-         "id": "00000e0",
+         "id": "00000dc",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -1006,6 +990,53 @@
           "_css_classes": "nd-steps"
          },
          "elements": [
+          {
+           "id": "00000cf",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "css_classes": "nd-step-card nd-glass",
+            "_css_classes": "nd-step-card nd-glass"
+           },
+           "elements": [
+            {
+             "id": "00000cc",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "1",
+              "header_size": "div",
+              "_css_classes": "nd-step-badge",
+              "css_classes": "nd-step-badge"
+             },
+             "elements": []
+            },
+            {
+             "id": "00000cd",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "گفت‌وگوی اولیه",
+              "header_size": "h3",
+              "_css_classes": "nd-h3",
+              "css_classes": "nd-h3"
+             },
+             "elements": []
+            },
+            {
+             "id": "00000ce",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
+              "editor": "<p>وضعیت سایت، هدف و انتظار شما را می‌شنوم و مشخص می‌کنم کدام خدمت واقعاً لازم است.</p>",
+              "_css_classes": "nd-muted",
+              "css_classes": "nd-muted"
+             },
+             "elements": []
+            }
+           ],
+           "isInner": false
+          },
           {
            "id": "00000d3",
            "elType": "container",
@@ -1020,7 +1051,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "1",
+              "title": "2",
               "header_size": "div",
               "_css_classes": "nd-step-badge",
               "css_classes": "nd-step-badge"
@@ -1032,7 +1063,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "گفت‌وگوی اولیه",
+              "title": "بررسی و برنامه",
               "header_size": "h3",
               "_css_classes": "nd-h3",
               "css_classes": "nd-h3"
@@ -1044,7 +1075,7 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
-              "editor": "<p>وضعیت سایت، هدف و انتظار شما را می‌شنوم و مشخص می‌کنم کدام خدمت واقعاً لازم است.</p>",
+              "editor": "<p>سایت و داده‌های موجود را بررسی می‌کنم و برنامه‌ای شفاف با اولویت‌های مشخص ارائه می‌دهم.</p>",
               "_css_classes": "nd-muted",
               "css_classes": "nd-muted"
              },
@@ -1067,7 +1098,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "2",
+              "title": "3",
               "header_size": "div",
               "_css_classes": "nd-step-badge",
               "css_classes": "nd-step-badge"
@@ -1079,7 +1110,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "بررسی و برنامه",
+              "title": "اجرا",
               "header_size": "h3",
               "_css_classes": "nd-h3",
               "css_classes": "nd-h3"
@@ -1091,7 +1122,7 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
-              "editor": "<p>سایت و داده‌های موجود را بررسی می‌کنم و برنامه‌ای شفاف با اولویت‌های مشخص ارائه می‌دهم.</p>",
+              "editor": "<p>کار را مرحله‌به‌مرحله و مستند انجام می‌دهم و در جریان بودن تغییرات، جایی برای ابهام نمی‌گذارم.</p>",
               "_css_classes": "nd-muted",
               "css_classes": "nd-muted"
              },
@@ -1114,7 +1145,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "3",
+              "title": "4",
               "header_size": "div",
               "_css_classes": "nd-step-badge",
               "css_classes": "nd-step-badge"
@@ -1126,53 +1157,6 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "اجرا",
-              "header_size": "h3",
-              "_css_classes": "nd-h3",
-              "css_classes": "nd-h3"
-             },
-             "elements": []
-            },
-            {
-             "id": "00000da",
-             "elType": "widget",
-             "widgetType": "text-editor",
-             "settings": {
-              "editor": "<p>کار را مرحله‌به‌مرحله و مستند انجام می‌دهم و در جریان بودن تغییرات، جایی برای ابهام نمی‌گذارم.</p>",
-              "_css_classes": "nd-muted",
-              "css_classes": "nd-muted"
-             },
-             "elements": []
-            }
-           ],
-           "isInner": false
-          },
-          {
-           "id": "00000df",
-           "elType": "container",
-           "settings": {
-            "content_width": "full",
-            "css_classes": "nd-step-card nd-glass",
-            "_css_classes": "nd-step-card nd-glass"
-           },
-           "elements": [
-            {
-             "id": "00000dc",
-             "elType": "widget",
-             "widgetType": "heading",
-             "settings": {
-              "title": "4",
-              "header_size": "div",
-              "_css_classes": "nd-step-badge",
-              "css_classes": "nd-step-badge"
-             },
-             "elements": []
-            },
-            {
-             "id": "00000dd",
-             "elType": "widget",
-             "widgetType": "heading",
-             "settings": {
               "title": "تحویل و پیگیری",
               "header_size": "h3",
               "_css_classes": "nd-h3",
@@ -1181,7 +1165,7 @@
              "elements": []
             },
             {
-             "id": "00000de",
+             "id": "00000da",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -1204,7 +1188,7 @@
      "isInner": false
     },
     {
-     "id": "00000ea",
+     "id": "00000e6",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -1213,7 +1197,7 @@
      },
      "elements": [
       {
-       "id": "00000e9",
+       "id": "00000e5",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -1222,7 +1206,7 @@
        },
        "elements": [
         {
-         "id": "00000e8",
+         "id": "00000e4",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -1231,7 +1215,7 @@
          },
          "elements": [
           {
-           "id": "00000e3",
+           "id": "00000df",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -1243,7 +1227,7 @@
            "elements": []
           },
           {
-           "id": "00000e4",
+           "id": "00000e0",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -1254,7 +1238,7 @@
            "elements": []
           },
           {
-           "id": "00000e7",
+           "id": "00000e3",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -1263,7 +1247,7 @@
            },
            "elements": [
             {
-             "id": "00000e5",
+             "id": "00000e1",
              "elType": "widget",
              "widgetType": "button",
              "settings": {
@@ -1279,7 +1263,7 @@
              "elements": []
             },
             {
-             "id": "00000e6",
+             "id": "00000e2",
              "elType": "widget",
              "widgetType": "button",
              "settings": {
@@ -1307,7 +1291,7 @@
      "isInner": false
     },
     {
-     "id": "00000f9",
+     "id": "00000f4",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -1316,7 +1300,7 @@
      },
      "elements": [
       {
-       "id": "00000f7",
+       "id": "00000f2",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -1326,7 +1310,7 @@
        "elements": []
       },
       {
-       "id": "00000f8",
+       "id": "00000f3",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {

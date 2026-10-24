@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('NADIA_DESIGN_VERSION', '1.0.0');
+define('NADIA_DESIGN_VERSION', '1.0.1');
 
 function nadia_design_enqueue(): void
 {
