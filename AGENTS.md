@@ -25,11 +25,20 @@ wordpress/
   nadia-elementor-kit.zip     Elementor kit: global colors/fonts + the page, no plugin needed
 ```
 
-The template references **no plugin assets**: images load from the public Lovable domain and
-all styling comes from the separate `nadia.css`. That file carries the Vazirmatn `@import` too, so
-pasting it into «ظاهر → سفارشی‌سازی → CSS افزودنی» styles the site with **no plugin at all**; the
-`nadia-design` plugin is only an optional convenience that enqueues the same file. CSS is never
-embedded in page content (see "The kit").
+**Layout is native Elementor, not CSS.** Every container and widget carries real Elementor
+settings — flex/grid containers (`flex_direction`, `flex_justify_content`, `flex_align_items`,
+`flex_gap`, `flex_wrap`, `grid_columns_grid`, `grid_gaps`), sizing (`width`, `min_height`,
+`padding`, `margin`), `background_*`, `border_*`, `border_radius`, `box_shadow_*`, typography
+(`typography_*`), widget colours and `animation` — so every section can be re-arranged from the
+Elementor panel with no code. `nadia.css` is deliberately tiny and holds only what Elementor has
+no control for: the Vazirmatn `@import`, `direction: rtl`, the `backdrop-filter` glass effect, two
+decorative glow pseudo-elements, the hero sparkle mask, `aspect-ratio` on images and the hover
+transforms.
+
+The template references **no plugin assets**: images load from the public Lovable domain. Because
+`nadia.css` carries the Vazirmatn `@import` too, pasting it into «ظاهر → سفارشی‌سازی → CSS افزودنی»
+styles the site with **no plugin at all**; the `nadia-design` plugin is only an optional
+convenience that enqueues the same file. CSS is never embedded in page content (see "The kit").
 
 `nadia-elementor-pixel-template.json` in the repo root is the older hand-made export and is unused.
 
@@ -149,6 +158,41 @@ python3 wordpress/bin/build-kit.py /tmp/kit.zip wordpress/nadia-elementor-kit.zi
    folder exists but is **not** registered (a half-finished install/upgrade), the guard falls back to
    `install --force --activate` so the "target folder already exists" error can never crash the boot.
 
+## Layout: the Elementor settings that matter
+
+Elementor's own container CSS constrains what the settings can do. `bin/build-elementor.py` is
+written around these rules — keep them in mind before changing it.
+
+- **Flex properties only apply to *full-width* containers.** `frontend.min.css` puts
+  `flex-direction / gap / justify-content / align-items` on `.e-con-full` (and on
+  `.e-con.e-flex > .e-con-inner`), while `.e-con-boxed.e-flex` is hard-forced to
+  `flex-direction: column; justify-content: normal`. A `content_width: boxed` container therefore
+  ignores every flex setting — an early version of this template rendered as one flat column
+  because of exactly that. So the content box is `content_width: full` +
+  `width: min(100%, 1200px)` + `_flex_size: none`, and its **parent** centres it with
+  `flex_align_items: center` (`boxed()` and `section()` do this).
+- **Grid containers work either way**, but always set `grid_rows_grid` to
+  `{"unit": "custom", "size": "auto"}`: the control's default is `repeat(2, 1fr)`, which adds an
+  empty second row. `grid_columns_grid` takes `{"unit": "fr", "size": N}`, or a raw track list via
+  `{"unit": "custom", "size": "1.15fr 0.85fr"}`.
+- **The `display: contents` normalize rules must stay in `nadia.css`.** Elementor renders
+  `div.e-con-inner` inside boxed containers (and `div.elementor-widget-container` when optimized
+  markup is off); without the normalize, a grid container's single inner wrapper would occupy one
+  column instead of spanning the grid.
+- **Header children need `width: auto` + `_flex_size: none`.** Containers default to
+  `--width: 100%`, so without both, brand / menu / CTA each take a full row.
+- **Fixed-size chips** (brand mark, card icon chips, timeline step numbers) are wrapper containers
+  with `width`/`min_height` in px — an icon widget has no background control, so the rounded
+  coloured square is a container.
+- **Badges/chips** (`nd-tag`, `nd-chip`) are heading widgets styled through the widget *Advanced →
+  Background / Border / Padding* controls (`_background_*`, `_border_*`, `_padding`).
+- **The header CTA is hidden on mobile natively** (`hide_mobile: "hidden-mobile"`), not with a
+  media query; the menu wraps to its own row via `width_mobile: 100%`.
+- **Entrance animation is native**: containers take `animation` / `animation_delay`, widgets
+  `_animation` / `_animation_delay`.
+- **Anchor ids** (`top` / `services` / `portfolio` / `resume` / `contact`) are `_element_id` on the
+  section containers.
+
 ## Elementor specifics that this project depends on
 
 - **Widget vs container CSS classes.** Containers read `css_classes`, widgets read `_css_classes`
@@ -179,6 +223,12 @@ curl -s -o /dev/null -w '%{http_code}\n' "$U/nadia-downloads/" \
 curl -s "$U/" | grep -o 'elementor/css/post-[0-9]*\.css'                          # generated CSS linked
 curl -s "$U/" | grep -o 'id="\(top\|services\|portfolio\|resume\|contact\)"'       # anchors
 curl -s "$U/" | grep -o 'href="#[a-z]*"'                                          # menu links to anchors
+
+# چیدمان باید از تنظیمات المنتور بیاید، نه از nadia.css:
+docker compose -f docker-compose.base44.yml exec -T wordpress sh -c \
+  'cat /var/www/html/wp-content/uploads/elementor/css/post-*.css' \
+  | grep -o -- '--justify-content:[^;]*\|--e-con-grid-template-columns:[^;]*' | sort -u
+# → --justify-content:space-between و repeat(3, 1fr) و 1.15fr 0.85fr و …
 ```
 
 Expected structure: the single home page = hero + 6 service cards + 3 projects + dark résumé band
